@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import profileImage from './assets/Profile_Picture.jpg';
+import backgroundImage from './assets/background_image.jpg';
 
 // --- Data extracted from CV (Expanded for detail pages) ---
 
@@ -258,26 +259,8 @@ const invitedTalksData = [
   }
 ];
 
-// --- Theme and Routing Logic ---
-
-const useTheme = () => {
-    const [theme, setTheme] = useState(() => {
-        const savedTheme = localStorage.getItem('theme');
-        return savedTheme || 'dark';
-    });
-
-    useEffect(() => {
-        const root = window.document.documentElement;
-        if (theme === 'dark') {
-            root.classList.add('dark');
-        } else {
-            root.classList.remove('dark');
-        }
-        localStorage.setItem('theme', theme);
-    }, [theme]);
-
-    return [theme, setTheme];
-};
+// --- Routing Logic ---
+// Theme toggle removed - using consistent dark theme with space background
 
 const pageVariants = {
     initial: { opacity: 0, x: "-100vw" },
@@ -317,7 +300,7 @@ const AnimatedSection = ({ children, className = '', id = '' }) => {
 
 // --- General UI Components ---
 
-const Header = ({ theme, setTheme, setPage }) => {
+const Header = ({ setPage }) => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -330,29 +313,26 @@ const Header = ({ theme, setTheme, setPage }) => {
     const navLinks = ["About", "Experience", "Skills", "Publications", "Achievements", "Contact"];
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-slate-100/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-slate-900/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#home" onClick={() => setPage('home')} className="text-xl font-bold text-slate-800 dark:text-white hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">PB</a>
+                <a href="#home" onClick={() => setPage('home')} className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">PB</a>
                 <div className="hidden md:flex space-x-6 items-center">
                     {navLinks.map(link => (
-                        <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setPage('home')} className="text-slate-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">{link}</a>
+                        <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setPage('home')} className="text-gray-300 hover:text-cyan-400 transition-colors">{link}</a>
                     ))}
                 </div>
                 <div className="flex items-center space-x-4">
-                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 w-10 h-10 flex items-center justify-center rounded-full text-slate-600 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-                        {theme === 'dark' ? <i className="fa-solid fa-sun text-xl"></i> : <i className="fa-solid fa-moon text-xl"></i>}
-                    </button>
                     <div className="md:hidden">
-                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-800 dark:text-white text-2xl">
+                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white text-2xl">
                             {isMenuOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
                         </button>
                     </div>
                 </div>
             </nav>
             {isMenuOpen && (
-                 <motion.div initial={{opacity:0, y: -20}} animate={{opacity:1, y: 0}} className="md:hidden py-4 bg-slate-100/90 dark:bg-slate-900/90">
+                 <motion.div initial={{opacity:0, y: -20}} animate={{opacity:1, y: 0}} className="md:hidden py-4 bg-slate-900/95">
                     {navLinks.map(link => (
-                        <a key={link} href={`#${link.toLowerCase()}`} onClick={() => { setPage('home'); setIsMenuOpen(false); }} className="block text-center py-2 text-slate-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">{link}</a>
+                        <a key={link} href={`#${link.toLowerCase()}`} onClick={() => { setPage('home'); setIsMenuOpen(false); }} className="block text-center py-2 text-gray-300 hover:text-cyan-400 transition-colors">{link}</a>
                     ))}
                 </motion.div>
             )}
@@ -362,7 +342,7 @@ const Header = ({ theme, setTheme, setPage }) => {
 
 const Footer = () => {
     return (
-        <footer className="bg-slate-200 dark:bg-slate-900 border-t border-slate-300 dark:border-slate-800 text-gray-600 dark:text-gray-400 py-6">
+        <footer className="bg-slate-900/80 border-t border-slate-700 text-gray-400 py-6 relative">
             <div className="container mx-auto text-center">
                 <p>&copy; {new Date().getFullYear()} {personalInfo.name}. All Rights Reserved.</p>
             </div>
@@ -375,19 +355,32 @@ const Footer = () => {
 
 const Hero = () => {
     return (
-        <section id="home" className="min-h-screen flex items-center bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-grid-slate-200 dark:bg-grid-slate-700/40 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)]"></div>
+        <section id="home" className="min-h-screen flex items-center text-white relative overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img 
+                    src={backgroundImage} 
+                    alt="Background" 
+                    className="w-full h-full object-cover"
+                />
+                {/* Subtle dark overlay */}
+                <div className="absolute inset-0 bg-slate-900/40"></div>
+            </div>
+            
+            {/* Grid overlay for design effect */}
+            <div className="absolute inset-0 bg-grid-slate-700/30 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] z-0"></div>
+            
             <div className="container mx-auto px-6 text-center z-10">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">{personalInfo.name}</h1>
-                    <p className="text-lg md:text-2xl text-cyan-500 dark:text-cyan-400 mb-8">{personalInfo.title}</p>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight text-white">{personalInfo.name}</h1>
+                    <p className="text-lg md:text-2xl text-cyan-400 mb-8">{personalInfo.title}</p>
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                         <div className="flex justify-center space-x-6 mb-8 text-3xl">
-                            <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
-                            <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" title="Google Scholar"><i className="ai ai-google-scholar"></i></a>
-                            <a href={personalInfo.links.inspireHEP} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" title="INSPIRE-HEP"><i className="ai ai-inspire"></i></a>
+                            <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
+                            <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="Google Scholar"><i className="ai ai-google-scholar"></i></a>
+                            <a href={personalInfo.links.inspireHEP} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="INSPIRE-HEP"><i className="ai ai-inspire"></i></a>
                         </div>
-                        <a href="#contact" className="bg-cyan-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 dark:shadow-cyan-500/20">Get in Touch</a>
+                        <a href="#contact" className="bg-cyan-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">Get in Touch</a>
                     </motion.div>
                 </motion.div>
             </div>
@@ -398,16 +391,16 @@ const Hero = () => {
 
 const About = () => {
     return (
-        <AnimatedSection id="about" className="bg-slate-50 dark:bg-slate-800">
+        <AnimatedSection id="about" className="bg-slate-900/60 backdrop-blur-sm relative">
             <div className="container mx-auto grid md:grid-cols-3 gap-12 items-center">
                 <div className="md:col-span-1">
-                    <motion.div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-slate-300 dark:bg-slate-700 overflow-hidden shadow-2xl" whileHover={{ scale: 1.05, rotate: 3 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <motion.div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-slate-700 overflow-hidden shadow-2xl" whileHover={{ scale: 1.05, rotate: 3 }} transition={{ type: "spring", stiffness: 300 }}>
                         <img src={profileImage} alt="Dr. Parthraj Bambhaniya" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
                 <div className="md:col-span-2 text-center md:text-left">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-4">Research Interests</h2>
-                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed">{personalInfo.researchInterests}</p>
+                    <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
+                    <p className="text-gray-300 leading-relaxed">{personalInfo.researchInterests}</p>
                 </div>
             </div>
         </AnimatedSection>
@@ -417,12 +410,12 @@ const About = () => {
 
 const SectionWithMoreButton = ({ id, title, children, onMoreClick }) => {
     return (
-        <AnimatedSection id={id} className="bg-slate-100 dark:bg-slate-900">
+        <AnimatedSection id={id} className="bg-slate-800/50 backdrop-blur-sm">
             <div className="container mx-auto">
-                <h2 className="text-3xl font-bold text-slate-800 dark:text-white text-center mb-12">{title}</h2>
+                <h2 className="text-3xl font-bold text-white text-center mb-12">{title}</h2>
                 {children}
                 <div className="text-center mt-12">
-                    <button onClick={onMoreClick} className="bg-transparent border-2 border-cyan-500 text-cyan-500 px-8 py-3 rounded-full text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    <button onClick={onMoreClick} className="bg-transparent border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-full text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105">
                         View Full Details
                     </button>
                 </div>
@@ -437,15 +430,25 @@ const SectionWithMoreButton = ({ id, title, children, onMoreClick }) => {
 const DetailPageLayout = ({ title, children, onBack }) => {
     return (
          <motion.div
-            className="min-h-screen pt-24"
+            className="min-h-screen pt-24 relative"
             initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition}
         >
-            <div className="container mx-auto px-6 py-12">
-                <button onClick={onBack} className="flex items-center text-cyan-500 dark:text-cyan-400 mb-8 font-semibold hover:underline">
+            {/* Background Image for detail pages */}
+            <div className="fixed inset-0 z-0">
+                <img 
+                    src={backgroundImage} 
+                    alt="Background" 
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-slate-900/70"></div>
+            </div>
+            
+            <div className="container mx-auto px-6 py-12 relative z-10">
+                <button onClick={onBack} className="flex items-center text-cyan-400 mb-8 font-semibold hover:underline">
                     <i className="fa-solid fa-arrow-left mr-2"></i> Back to Main Page
                 </button>
-                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-12 border-b-2 border-cyan-500/50 pb-4">{title}</h1>
-                <div className="prose prose-lg dark:prose-invert max-w-none text-slate-600 dark:text-gray-300">
+                <h1 className="text-4xl font-bold text-white mb-12 border-b-2 border-cyan-500/50 pb-4">{title}</h1>
+                <div className="prose prose-lg prose-invert max-w-none text-gray-300">
                     {children}
                 </div>
             </div>
@@ -461,9 +464,9 @@ const ExperiencePage = ({ onBack }) => {
                 {experienceData.map((item, index) => (
                     <div key={index} className="mb-10">
                         <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-cyan-500"></div>
-                        <p className="text-cyan-500 dark:text-cyan-400 text-md font-semibold">{item.duration}</p>
-                        <h3 className="text-2xl font-bold text-slate-800 dark:text-white mt-1">{item.role}</h3>
-                        <p className="text-lg text-slate-700 dark:text-gray-400 mb-2">{item.institution}</p>
+                        <p className="text-cyan-400 text-md font-semibold">{item.duration}</p>
+                        <h3 className="text-2xl font-bold text-white mt-1">{item.role}</h3>
+                        <p className="text-lg text-gray-400 mb-2">{item.institution}</p>
                         <p>{item.description}</p>
                     </div>
                 ))}
@@ -479,8 +482,8 @@ const PublicationsPage = ({ onBack }) => {
              <ol className="list-decimal space-y-6 pl-6">
                 {fullPublicationsList.map((pub, index) => (
                     <li key={index}>
-                        <h3 className="font-semibold text-slate-800 dark:text-white text-xl">{pub.title}</h3>
-                        <p className="text-cyan-500 dark:text-cyan-400">{pub.journal}</p>
+                        <h3 className="font-semibold text-white text-xl">{pub.title}</h3>
+                        <p className="text-cyan-400">{pub.journal}</p>
                     </li>
                 ))}
             </ol>
@@ -494,7 +497,7 @@ const AchievementsPage = ({ onBack }) => {
          <DetailPageLayout title="Notable Achievements" onBack={onBack}>
              <ul className="space-y-6">
                 {achievementsData.map((item, index) => (
-                    <li key={index} className="flex items-start space-x-4 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                    <li key={index} className="flex items-start space-x-4 p-4 bg-slate-800/50 rounded-lg">
                         <div className="text-cyan-400 text-2xl mt-1 flex-shrink-0 w-8 text-center"><i className="fa-solid fa-award"></i></div>
                         <p>{item}</p>
                     </li>
@@ -510,15 +513,15 @@ const SupervisedStudentsPage = ({ onBack }) => {
             {supervisedStudentsData.length > 0 ? (
                 <div className="space-y-6">
                     {supervisedStudentsData.map((student, index) => (
-                        <div key={index} className="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                            <h3 className="text-xl font-bold text-slate-800 dark:text-white">{student.name}</h3>
-                            <p className="text-cyan-500 dark:text-cyan-400">{student.level} Student • {student.year}</p>
-                            <p className="mt-2 text-slate-600 dark:text-gray-300">{student.topic}</p>
+                        <div key={index} className="p-6 bg-slate-800/50 rounded-lg">
+                            <h3 className="text-xl font-bold text-white">{student.name}</h3>
+                            <p className="text-cyan-400">{student.level} Student • {student.year}</p>
+                            <p className="mt-2 text-gray-300">{student.topic}</p>
                         </div>
                     ))}
                 </div>
             ) : (
-                <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+                <p className="text-gray-300">Information to be added from CV.</p>
             )}
         </DetailPageLayout>
     );
@@ -530,44 +533,44 @@ const ConferencesWorkshopsPage = ({ onBack }) => {
             <div className="space-y-12">
                 {/* Conferences Section */}
                 <div>
-                    <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 border-b border-cyan-500/30 pb-2">Conferences</h2>
+                    <h2 className="text-2xl font-bold text-white mb-6 border-b border-cyan-500/30 pb-2">Conferences</h2>
                     {conferencesData.length > 0 ? (
                         <div className="space-y-4">
                             {conferencesData.map((conf, index) => (
-                                <div key={index} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                                    <h3 className="font-semibold text-slate-800 dark:text-white text-lg">{conf.title}</h3>
-                                    <p className="text-cyan-500 dark:text-cyan-400">{conf.location} • {conf.date}</p>
-                                    {conf.role && <p className="text-sm text-slate-600 dark:text-gray-400 mt-1">{conf.role}</p>}
+                                <div key={index} className="p-4 bg-slate-800/50 rounded-lg">
+                                    <h3 className="font-semibold text-white text-lg">{conf.title}</h3>
+                                    <p className="text-cyan-400">{conf.location} • {conf.date}</p>
+                                    {conf.role && <p className="text-sm text-gray-400 mt-1">{conf.role}</p>}
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+                        <p className="text-gray-300">Information to be added from CV.</p>
                     )}
                 </div>
 
                 {/* Workshops Section */}
                 <div>
-                    <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 border-b border-cyan-500/30 pb-2">Workshops</h2>
+                    <h2 className="text-2xl font-bold text-white mb-6 border-b border-cyan-500/30 pb-2">Workshops</h2>
                     {workshopsData.length > 0 ? (
                         <div className="space-y-4">
                             {workshopsData.map((workshop, index) => (
-                                <div key={index} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                <div key={index} className="p-4 bg-slate-800/50 rounded-lg">
                                     <div className="flex items-start justify-between">
                                         <div>
-                                            <h3 className="font-semibold text-slate-800 dark:text-white text-lg">{workshop.title}</h3>
-                                            <p className="text-cyan-500 dark:text-cyan-400">{workshop.location} • {workshop.date}</p>
-                                            {workshop.role && <p className="text-sm text-slate-600 dark:text-gray-400 mt-1">{workshop.role}</p>}
+                                            <h3 className="font-semibold text-white text-lg">{workshop.title}</h3>
+                                            <p className="text-cyan-400">{workshop.location} • {workshop.date}</p>
+                                            {workshop.role && <p className="text-sm text-gray-400 mt-1">{workshop.role}</p>}
                                         </div>
                                         {workshop.type === "organized" && (
-                                            <span className="bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">Organized</span>
+                                            <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">Organized</span>
                                         )}
                                     </div>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+                        <p className="text-gray-300">Information to be added from CV.</p>
                     )}
                 </div>
             </div>
@@ -581,12 +584,12 @@ const InvitedTalksPage = ({ onBack }) => {
             {invitedTalksData.length > 0 ? (
                 <div className="space-y-6">
                     {invitedTalksData.map((talk, index) => (
-                        <div key={index} className="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-lg border-l-4 border-cyan-500">
-                            <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">{talk.title}</h3>
-                            <p className="text-cyan-500 dark:text-cyan-400 font-medium">{talk.venue}</p>
-                            <p className="text-slate-600 dark:text-gray-400 mt-1">{talk.location} • {talk.date}</p>
+                        <div key={index} className="p-6 bg-slate-800/50 rounded-lg border-l-4 border-cyan-500">
+                            <h3 className="text-xl font-bold text-white mb-2">{talk.title}</h3>
+                            <p className="text-cyan-400 font-medium">{talk.venue}</p>
+                            <p className="text-gray-400 mt-1">{talk.location} • {talk.date}</p>
                             {talk.link && (
-                                <a href={talk.link} target="_blank" rel="noopener noreferrer" className="text-cyan-500 dark:text-cyan-400 text-sm mt-2 inline-block hover:underline">
+                                <a href={talk.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm mt-2 inline-block hover:underline">
                                     Watch Recording <i className="fa-solid fa-arrow-up-right-from-square ml-1"></i>
                                 </a>
                             )}
@@ -594,7 +597,7 @@ const InvitedTalksPage = ({ onBack }) => {
                     ))}
                 </div>
             ) : (
-                <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+                <p className="text-gray-300">Information to be added from CV.</p>
             )}
         </DetailPageLayout>
     );
@@ -616,31 +619,31 @@ const MainPage = ({ setPage }) => {
                         <motion.div key={index} className="mb-8 flex justify-between items-center w-full" initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.8 }}>
                             <div className="hidden md:block w-5/12"></div>
                             <div className="z-10 hidden md:flex items-center"><div className="bg-cyan-500 rounded-full h-4 w-4 shadow-lg shadow-cyan-500/50"></div></div>
-                            <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-xl w-full md:w-5/12">
-                                <p className="text-cyan-500 dark:text-cyan-400 text-sm mb-1">{item.duration}</p>
-                                <h3 className="text-xl font-bold text-slate-800 dark:text-white">{item.role}</h3>
-                                <p className="text-slate-600 dark:text-gray-400">{item.institution}</p>
+                            <div className="bg-slate-800/70 backdrop-blur-sm p-6 rounded-lg shadow-xl w-full md:w-5/12">
+                                <p className="text-cyan-400 text-sm mb-1">{item.duration}</p>
+                                <h3 className="text-xl font-bold text-white">{item.role}</h3>
+                                <p className="text-gray-400">{item.institution}</p>
                             </div>
                         </motion.div>
                     ))}
                 </div>
             </SectionWithMoreButton>
 
-            <AnimatedSection id="skills" className="bg-slate-50 dark:bg-slate-800">
+            <AnimatedSection id="skills" className="bg-slate-900/60 backdrop-blur-sm">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white text-center mb-12">Technical Skills</h2>
+                    <h2 className="text-3xl font-bold text-white text-center mb-12">Technical Skills</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <motion.div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-lg" whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-                            <div className="flex items-center mb-4 text-cyan-400 text-2xl"><span className="w-10 text-center"><i className="fa-solid fa-microchip"></i></span><h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Programming</h3></div>
-                            <ul>{skillsData.programming.map(s => <li key={s} className="text-slate-600 dark:text-gray-300 mb-1 pl-2 border-l-2 border-slate-300 dark:border-slate-700">{s}</li>)}</ul>
+                        <motion.div className="bg-slate-800/70 p-6 rounded-lg shadow-lg" whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+                            <div className="flex items-center mb-4 text-cyan-400 text-2xl"><span className="w-10 text-center"><i className="fa-solid fa-microchip"></i></span><h3 className="text-xl font-bold text-white ml-3">Programming</h3></div>
+                            <ul>{skillsData.programming.map(s => <li key={s} className="text-gray-300 mb-1 pl-2 border-l-2 border-slate-700">{s}</li>)}</ul>
                         </motion.div>
-                         <motion.div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-lg" whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-                            <div className="flex items-center mb-4 text-cyan-400 text-2xl"><span className="w-10 text-center"><i className="fa-solid fa-atom"></i></span><h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Computational</h3></div>
-                            <ul>{skillsData.computational.map(s => <li key={s} className="text-slate-600 dark:text-gray-300 mb-1 pl-2 border-l-2 border-slate-300 dark:border-slate-700">{s}</li>)}</ul>
+                         <motion.div className="bg-slate-800/70 p-6 rounded-lg shadow-lg" whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+                            <div className="flex items-center mb-4 text-cyan-400 text-2xl"><span className="w-10 text-center"><i className="fa-solid fa-atom"></i></span><h3 className="text-xl font-bold text-white ml-3">Computational</h3></div>
+                            <ul>{skillsData.computational.map(s => <li key={s} className="text-gray-300 mb-1 pl-2 border-l-2 border-slate-700">{s}</li>)}</ul>
                         </motion.div>
-                         <motion.div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-lg" whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-                            <div className="flex items-center mb-4 text-cyan-400 text-2xl"><span className="w-10 text-center"><i className="fa-solid fa-screwdriver-wrench"></i></span><h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Tools</h3></div>
-                            <ul>{skillsData.tools.map(s => <li key={s} className="text-slate-600 dark:text-gray-300 mb-1 pl-2 border-l-2 border-slate-300 dark:border-slate-700">{s}</li>)}</ul>
+                         <motion.div className="bg-slate-800/70 p-6 rounded-lg shadow-lg" whileHover={{ y: -5, transition: { duration: 0.2 } }}>
+                            <div className="flex items-center mb-4 text-cyan-400 text-2xl"><span className="w-10 text-center"><i className="fa-solid fa-screwdriver-wrench"></i></span><h3 className="text-xl font-bold text-white ml-3">Tools</h3></div>
+                            <ul>{skillsData.tools.map(s => <li key={s} className="text-gray-300 mb-1 pl-2 border-l-2 border-slate-700">{s}</li>)}</ul>
                         </motion.div>
                     </div>
                 </div>
@@ -649,9 +652,9 @@ const MainPage = ({ setPage }) => {
             <SectionWithMoreButton id="publications" title="Selected Publications" onMoreClick={() => setPage('publications')}>
                  <div className="space-y-6">
                     {publicationsPreview.map((pub, index) => (
-                        <motion.div key={index} className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-cyan-500/20" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
-                            <h3 className="font-semibold text-slate-800 dark:text-white text-lg">{pub.title}</h3>
-                            <p className="text-cyan-500 dark:text-cyan-400 text-sm">{pub.journal}</p>
+                        <motion.div key={index} className="bg-slate-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-cyan-500/20" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+                            <h3 className="font-semibold text-white text-lg">{pub.title}</h3>
+                            <p className="text-cyan-400 text-sm">{pub.journal}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -661,62 +664,62 @@ const MainPage = ({ setPage }) => {
                  <div className="grid md:grid-cols-2 gap-6">
                     {achievementsData.slice(0, 4).map((item, index) => (
                         <motion.div key={index} className="flex items-start space-x-4 p-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
-                            <div className="text-cyan-500 dark:text-cyan-400 mt-1 text-2xl w-8 text-center"><i className="fa-solid fa-award"></i></div>
-                            <p className="text-slate-600 dark:text-gray-300">{item}</p>
+                            <div className="text-cyan-400 mt-1 text-2xl w-8 text-center"><i className="fa-solid fa-award"></i></div>
+                            <p className="text-gray-300">{item}</p>
                         </motion.div>
                     ))}
                 </div>
             </SectionWithMoreButton>
 
             {/* Academic Activities Grid */}
-            <AnimatedSection id="academic-activities" className="bg-slate-100 dark:bg-slate-900">
+            <AnimatedSection id="academic-activities" className="bg-slate-900/60 backdrop-blur-sm">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white text-center mb-12">Academic Activities</h2>
+                    <h2 className="text-3xl font-bold text-white text-center mb-12">Academic Activities</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* Supervised Students */}
                         <motion.div 
-                            className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg cursor-pointer" 
+                            className="bg-slate-800/70 p-6 rounded-lg shadow-lg cursor-pointer" 
                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             onClick={() => setPage('students')}
                         >
                             <div className="flex items-center mb-4 text-cyan-400 text-3xl">
                                 <span className="w-12 text-center"><i className="fa-solid fa-user-graduate"></i></span>
-                                <h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Supervised Students</h3>
+                                <h3 className="text-xl font-bold text-white ml-3">Supervised Students</h3>
                             </div>
-                            <p className="text-slate-600 dark:text-gray-300 mb-4">Mentoring and guiding research students</p>
-                            <button className="text-cyan-500 dark:text-cyan-400 font-semibold hover:underline flex items-center">
+                            <p className="text-gray-300 mb-4">Mentoring and guiding research students</p>
+                            <button className="text-cyan-400 font-semibold hover:underline flex items-center">
                                 View Details <i className="fa-solid fa-arrow-right ml-2"></i>
                             </button>
                         </motion.div>
 
                         {/* Conferences & Workshops */}
                         <motion.div 
-                            className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg cursor-pointer" 
+                            className="bg-slate-800/70 p-6 rounded-lg shadow-lg cursor-pointer" 
                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             onClick={() => setPage('conferences')}
                         >
                             <div className="flex items-center mb-4 text-cyan-400 text-3xl">
                                 <span className="w-12 text-center"><i className="fa-solid fa-users"></i></span>
-                                <h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Conferences & Workshops</h3>
+                                <h3 className="text-xl font-bold text-white ml-3">Conferences & Workshops</h3>
                             </div>
-                            <p className="text-slate-600 dark:text-gray-300 mb-4">Participated and organized academic events</p>
-                            <button className="text-cyan-500 dark:text-cyan-400 font-semibold hover:underline flex items-center">
+                            <p className="text-gray-300 mb-4">Participated and organized academic events</p>
+                            <button className="text-cyan-400 font-semibold hover:underline flex items-center">
                                 View Details <i className="fa-solid fa-arrow-right ml-2"></i>
                             </button>
                         </motion.div>
 
                         {/* Invited Talks */}
                         <motion.div 
-                            className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg cursor-pointer" 
+                            className="bg-slate-800/70 p-6 rounded-lg shadow-lg cursor-pointer" 
                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             onClick={() => setPage('talks')}
                         >
                             <div className="flex items-center mb-4 text-cyan-400 text-3xl">
                                 <span className="w-12 text-center"><i className="fa-solid fa-microphone"></i></span>
-                                <h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Invited Talks</h3>
+                                <h3 className="text-xl font-bold text-white ml-3">Invited Talks</h3>
                             </div>
-                            <p className="text-slate-600 dark:text-gray-300 mb-4">Presentations at institutions and conferences</p>
-                            <button className="text-cyan-500 dark:text-cyan-400 font-semibold hover:underline flex items-center">
+                            <p className="text-gray-300 mb-4">Presentations at institutions and conferences</p>
+                            <button className="text-cyan-400 font-semibold hover:underline flex items-center">
                                 View Details <i className="fa-solid fa-arrow-right ml-2"></i>
                             </button>
                         </motion.div>
@@ -724,10 +727,10 @@ const MainPage = ({ setPage }) => {
                 </div>
             </AnimatedSection>
             
-            <AnimatedSection id="contact" className="bg-slate-50 dark:bg-slate-800">
+            <AnimatedSection id="contact" className="bg-slate-800/50 backdrop-blur-sm">
                 <div className="container mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-4">Get In Touch</h2>
-                    <p className="text-slate-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">I am always open to discussing new research, collaborations, or opportunities. Feel free to reach out to me via email.</p>
+                    <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+                    <p className="text-gray-400 mb-8 max-w-2xl mx-auto">I am always open to discussing new research, collaborations, or opportunities. Feel free to reach out to me via email.</p>
                     <motion.a href={`mailto:${personalInfo.email}`} className="inline-flex items-center bg-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <i className="fa-solid fa-envelope mr-3"></i> {personalInfo.email}
                     </motion.a>
@@ -740,7 +743,6 @@ const MainPage = ({ setPage }) => {
 
 // --- Top-Level App Component ---
 export default function App() {
-  const [theme, setTheme] = useTheme();
   const [page, setPage] = useState('home');
 
   useEffect(() => {
@@ -788,19 +790,31 @@ export default function App() {
   }
 
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-white font-sans leading-normal tracking-tight">
+    <div className="bg-slate-900 text-white font-sans leading-normal tracking-tight relative min-h-screen">
+        {/* Global Background Image */}
+        <div className="fixed inset-0 z-0">
+            <img 
+                src={backgroundImage} 
+                alt="Space Background" 
+                className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-slate-900/50"></div>
+        </div>
+        
         <style>{`
-          .bg-grid-slate-200 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23e2e8f0'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
-          .dark .dark\\:bg-grid-slate-700\\/40 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-opacity='0.4' stroke='%23334155'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
+          .bg-grid-slate-700\\/30 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-opacity='0.3' stroke='%23334155'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
           html { scroll-behavior: smooth; }
         `}</style>
-        <Header theme={theme} setTheme={setTheme} page={page} setPage={setPage} />
-        <main>
-            <AnimatePresence mode="wait">
-                {renderPage()}
-            </AnimatePresence>
-        </main>
-        <Footer />
+        
+        <div className="relative z-10">
+            <Header page={page} setPage={setPage} />
+            <main>
+                <AnimatePresence mode="wait">
+                    {renderPage()}
+                </AnimatePresence>
+            </main>
+            <Footer />
+        </div>
     </div>
   )
 }
