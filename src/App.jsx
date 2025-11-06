@@ -12,9 +12,9 @@ const personalInfo = {
   location: "São Paulo, Brazil",
   researchInterests: "My research interests span theoretical, computational, and observational aspects of Black holes and supermassive compact objects, including astrophysical black holes and spacetime singularities, shadows and accretion disk properties, general theory of relativity, relativistic jets and high-energy outflows, relativistic orbits and precession of S-stars, relativistic time delays and pulsar timings, gravitational collapse, tidal disruption events, energy extraction from ultra-strong gravity regions, gamma-ray bursts and high-energy transients, magnetohydrodynamics (MHD), general relativistic MHD (GRMHD), and plasma astrophysics and magnetized accretion flows.",
   links: {
-    googleScholar: "https://scholar.google.com/citations?user=PLACEHOLDER",
+    googleScholar: "https://scholar.google.com/citations?user=bfBJi04AAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8424-3357",
-    inspireHEP: "https://inspirehep.net/authors/PLACEHOLDER",
+    inspireHEP: "https://inspirehep.net/authors/1757353?ui-citation-summary=true",
   }
 };
 
