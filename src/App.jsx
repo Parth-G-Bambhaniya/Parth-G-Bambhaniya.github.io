@@ -166,13 +166,7 @@ const conferencesData = [
     type: "attended",
     role: "Participant"
   },
-  { 
-    title: "International Workshop on Relativistic Astrophysics and Gravitation (online)", 
-    location: "Astronomical Institute of Uzbekistan Academy of Sciences", 
-    date: "12-14 May 2021", 
-    type: "attended",
-    role: "Participant"
-  },
+
   { 
     title: "The 21st BritGrav meeting", 
     location: "Relativity Group, University College Dublin, Ireland", 
@@ -201,16 +195,24 @@ const conferencesData = [
     type: "attended",
     role: "Participant"
   },
-  { 
+  
+];
+
+const workshopsData = [
+    { 
+    title: "International Workshop on Relativistic Astrophysics and Gravitation (online)", 
+    location: "Astronomical Institute of Uzbekistan Academy of Sciences", 
+    date: "12-14 May 2021", 
+    type: "attended",
+    role: "Participant"
+  },
+{ 
     title: "International Workshop on Astrophysics and Cosmology", 
     location: "ICC, CHARUSAT, Anand, Gujarat, India", 
     date: "20-24 Dec 2019", 
     type: "attended",
     role: "Oral Presentation"
-  }
-];
-
-const workshopsData = [
+  },
   {
     title: "International workshop on Astrophysics and Cosmology",
     location: "ICC, CHARUSAT",
@@ -225,19 +227,22 @@ const invitedTalksData = [
     title: "Invited for Podcast on Black holes and Naked Singularities",
     venue: "Physics for Students Channel, India",
     location: "Online (YouTube)",
-    date: "25th May, 2025"
+    date: "25th May, 2025",
+    link: "https://www.youtube.com/live/g6cCmQwWbUg"
   },
   {
     title: "Do We Really Know What's at the Center of Our Galaxy?",
     venue: "IAG-USP",
     location: "Sao Paulo, Brazil (YouTube)",
-    date: "9th April, 2025"
+    date: "9th April, 2025",
+    link: "https://www.youtube.com/live/2jt30CbMyOg?si=yF4wAk0sKv1VCVZC"
   },
   {
     title: "Are We Sure It's a Supermassive Black Hole at the Heart of Our Galaxy?",
     venue: "Astro and Cosmo meeting by ICTP-SAIFR",
     location: "Sao Paulo, Brazil (YouTube)",
-    date: "4th April, 2025"
+    date: "4th April, 2025",
+    link: "https://www.youtube.com/watch?v=ZzqTugWqMv0"
   },
   {
     title: "Life of Stars and Black Holes",
@@ -580,6 +585,11 @@ const InvitedTalksPage = ({ onBack }) => {
                             <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">{talk.title}</h3>
                             <p className="text-cyan-500 dark:text-cyan-400 font-medium">{talk.venue}</p>
                             <p className="text-slate-600 dark:text-gray-400 mt-1">{talk.location} • {talk.date}</p>
+                            {talk.link && (
+                                <a href={talk.link} target="_blank" rel="noopener noreferrer" className="text-cyan-500 dark:text-cyan-400 text-sm mt-2 inline-block hover:underline">
+                                    Watch Recording <i className="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>
