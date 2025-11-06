@@ -166,13 +166,7 @@ const conferencesData = [
     type: "attended",
     role: "Participant"
   },
-  { 
-    title: "International Workshop on Relativistic Astrophysics and Gravitation (online)", 
-    location: "Astronomical Institute of Uzbekistan Academy of Sciences", 
-    date: "12-14 May 2021", 
-    type: "attended",
-    role: "Participant"
-  },
+
   { 
     title: "The 21st BritGrav meeting", 
     location: "Relativity Group, University College Dublin, Ireland", 
@@ -201,16 +195,24 @@ const conferencesData = [
     type: "attended",
     role: "Participant"
   },
-  { 
+  
+];
+
+const workshopsData = [
+    { 
+    title: "International Workshop on Relativistic Astrophysics and Gravitation (online)", 
+    location: "Astronomical Institute of Uzbekistan Academy of Sciences", 
+    date: "12-14 May 2021", 
+    type: "attended",
+    role: "Participant"
+  },
+{ 
     title: "International Workshop on Astrophysics and Cosmology", 
     location: "ICC, CHARUSAT, Anand, Gujarat, India", 
     date: "20-24 Dec 2019", 
     type: "attended",
     role: "Oral Presentation"
-  }
-];
-
-const workshopsData = [
+  },
   {
     title: "International workshop on Astrophysics and Cosmology",
     location: "ICC, CHARUSAT",
