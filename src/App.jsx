@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import profileImage from './assets/Profile_Picture.jpg';
 
 // --- Data extracted from CV (Expanded for detail pages) ---
 
 const personalInfo = {
   name: "Dr. Parthraj Bambhaniya",
   title: "FAPESP Postdoctoral Fellow | Astrophysicist",
-  email: "parth.bambhaniya@usp.br",
+  email: "grcollapse@gmail.com / parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
-  about: "A dedicated postdoctoral researcher with a strong background in theoretical, computational, and observational aspects of Black Holes and supermassive compact objects. My work focuses on exploring the fundamental physics of gravity through phenomena like black hole shadows, accretion disks, and relativistic orbits.",
+  researchInterests: "My research interests span theoretical, computational, and observational aspects of Black holes and supermassive compact objects, including astrophysical black holes and spacetime singularities, shadows and accretion disk properties, general theory of relativity, relativistic jets and high-energy outflows, relativistic orbits and precession of S-stars, relativistic time delays and pulsar timings, gravitational collapse, tidal disruption events, energy extraction from ultra-strong gravity regions, gamma-ray bursts and high-energy transients, magnetohydrodynamics (MHD), general relativistic MHD (GRMHD), and plasma astrophysics and magnetized accretion flows.",
   links: {
-    googleScholar: "https://scholar.google.com/citations?user=your_id", // Replace with actual URL
+    googleScholar: "https://scholar.google.com/citations?user=PLACEHOLDER",
     orcid: "https://orcid.org/0000-0001-8424-3357",
-    inspireHEP: "https://inspirehep.net/authors/your_id", // Replace with actual URL
-    linkedIn: "https://linkedin.com/in/your_username", // Replace with actual URL
+    inspireHEP: "https://inspirehep.net/authors/PLACEHOLDER",
   }
 };
 
@@ -53,25 +53,47 @@ const experienceData = [
 
 const skillsData = {
   programming: ["C/C++", "Python", "FORTRAN", "Mathematica"],
-  computational: ["Ray-tracing (Brahma code)", "Radiative Transfer Modeling", "MHD & GRHD Simulations (PLUTO, Athena++)", "Numerical Astrophysics"],
-  tools: ["LaTeX", "Linux", "Mac OS", "Windows", "MS Office"]
+  computational: [
+    "Ray-tracing formalism for black hole and compact object imaging (Brahma code)", 
+    "Radiative transfer modeling in accretion flows (RIAF models)", 
+    "MHD and GRMHD simulations (PLUTO, Athena++)", 
+    "Numerical Astrophysics"
+  ],
+  tools: ["LaTeX", "Linux", "Mac", "Windows", "MS Office"]
 };
 
 const fullPublicationsList = [
-    { title: "Retrograde Precession of Relativistic Orbits and the Quest for Charged Black Holes", journal: "Phys. Dark. Univ. 48, 2025, 101949." },
-    { title: "Time Delay of Pulsar Signals in Astrophysical Black Hole Spacetimes", journal: "Phys. Dark. Univ. 49, 2025, 10203649." },
-    { title: "Shadow Formation Conditions Beyond the Kerr Black Hole Paradigm", journal: "Symmetry (accepted)." },
-    { title: "On the interactions of black holes and cosmic strings", journal: "Phys. Dark. Univ. 46, 2024, 101553." },
-    { title: "Relativistic orbits of S2 star in the presence of scalar field", journal: "Eur. Phys. J. C, 84, 2024, 124." },
-    { title: "Imaging ultra-compact objects with radiative inefficient accretion flows", journal: "Astronomy and Astrophysics 682, 2024, A113." },
-    { title: "Horizon-scale tests of gravity theories and fundamental physics from the EHT image of Sagittarius A*", journal: "Class. Quant. Grav. 40, 2023, 165007." },
-    { title: "Energy extraction from Janis-Newman-Winicour naked singularity", journal: "Phys. Rev. D 107, 2023, 064036." },
-    { title: "Thin accretion disk in the Simpson-Visser black-bounce and wormhole spacetime", journal: "Phys. Rev. D 105, 2022, 023021." },
-    { title: "Shadows and negative precession in non-Kerr spacetime", journal: "Phys. Rev. D 103, 2021, 084005." },
-    { title: "Shadow of a Naked Singularity without Photon Sphere", journal: "Phys. Rev. D 102, 2020, 024022." },
-    { title: "Timelike geodesics in Naked Singularity and Black Hole Spacetimes", journal: "Phys. Rev. D 100, 2019, 124020." }
+    // Published Articles
+    { title: "Timelike geodesics in Naked Singularity and Black Hole Spacetimes", journal: "Phys. Rev. D 100, 2019, 124020.", type: "published" },
+    { title: "Towards an Observational test of Black Hole versus Naked Singularity at the Galactic Center", journal: "Int. J. Mod. Phys. D. 28, 2019, 1930024.", type: "published" },
+    { title: "Shadow of a Naked Singularity without Photon Sphere", journal: "Phys. Rev. D 102, 2020, 024022.", type: "published" },
+    { title: "Precession of timelike bound orbits in Kerr spacetime", journal: "Eur. Phys. J. C 81, 2021, 205.", type: "published" },
+    { title: "Shadows and negative precession in non-Kerr spacetime", journal: "Phys. Rev. D 103, 2021, 084005.", type: "published" },
+    { title: "Thin accretion disk in the Simpson-Visser black-bounce and wormhole spacetime", journal: "Phys. Rev. D 105, 2022, 023021.", type: "published" },
+    { title: "Shadows and precession of orbits in rotating Janis-Newman-Winicour spacetime", journal: "Eur. Phys. J. C 82, 2022, 77.", type: "published" },
+    { title: "Rotational energy extraction from the Kerr black hole's mimickers", journal: "Universe 8. 2022, 571.", type: "published" },
+    { title: "Energy extraction from Janis-Newman-Winicour naked singularity", journal: "Phys. Rev. D 107, 2023, 064036.", type: "published" },
+    { title: "Lense-Thirring effect and precession of timelike geodesics in slowly rotating black hole and naked singularity spacetimes", journal: "Phys. Dark. Univ. 40, 2023, 101215.", type: "published" },
+    { title: "Horizon-scale tests of gravity theories and fundamental physics from the Event Horizon Telescope image of Sagittarius A*", journal: "Class. Quant. Grav. 40, 2023, 165007.", type: "published" },
+    { title: "Imaging ultra-compact objects with radiative inefficient accretion flows", journal: "Astronomy and Astrophysics 682, 2024, A113.", type: "published" },
+    { title: "Relativistic orbits of S2 star in the presence of scalar field", journal: "Eur. Phys. J. C, 84, 2024, 124.", type: "published" },
+    { title: "Tidal forces in the Simpson-Visser black-bounce and wormhole spacetimes", journal: "Phys. Dark. Univ. 44, 2024, 101487.", type: "published" },
+    { title: "Tidal force effects and periodic orbits in null naked singularity spacetime", journal: "Chin. Phys. C 48, 2024, 11, 115108.", type: "published" },
+    { title: "On the interactions of black holes and cosmic strings", journal: "Phys. Dark. Univ. 46, 2024, 101553.", type: "published" },
+    { title: "Relativistic time delay analysis of pulsar signals near ultra-compact objects", journal: "Phys. Rev. D 110, 2024, 104026.", type: "published" },
+    { title: "Influence of primary hair and plasma on intensity distribution of black hole shadows", journal: "Eur. Phys. J. Plus 140, 2025, 23", type: "published" },
+    { title: "Retrograde Precession of Relativistic Orbits and the Quest for Charged Black Holes", journal: "Phys. Dark. Univ. 48, 2025, 101949.", type: "published" },
+    { title: "Time Delay of Pulsar Signals in Astrophysical Black Hole Spacetimes", journal: "Phys. Dark. Univ. 49, 2025, 10203649.", type: "published" },
+    { title: "Shadow Formation Conditions Beyond the Kerr Black Hole Paradigm", journal: "accepted for publication in Symmetry.", type: "published" },
+    
+    // Submitted/arXiv Articles
+    { title: "A Study of Black Holes and Beyond: Shadows and Relativistic Orbits", journal: "arXiv:2406.01202 [gr-qc].", type: "submitted" },
+    { title: "Timelike Geodesics in Naked Singularity and Black Hole Spacetimes II", journal: "arXiv:1909.08873 [gr-qc].", type: "submitted" },
+    { title: "Probing the Shadow Image of the Sagittarius A* with Event Horizon Telescope", journal: "arXiv:2202.00588 [gr-qc].", type: "submitted" },
+    { title: "High Energy Particle Collisions in the vicinity of Naked Singularity", journal: "arXiv:2209.12610 [gr-qc].", type: "submitted" },
+    { title: "Quasinormal Modes and Stability Analysis of the JMN-1 Naked Singularity", journal: "arXiv: 2504.01653 [gr-qc].", type: "submitted" }
 ];
-const publicationsPreview = fullPublicationsList.slice(0, 5);
+const publicationsPreview = fullPublicationsList.filter(pub => pub.type === "published").slice(0, 5);
 
 const achievementsData = [
   "FAPESP Postdoctoral Fellowship, Grant No. 2024/09383-4, IAG, Sao Paulo University, Brazil, 2024.",
@@ -82,6 +104,153 @@ const achievementsData = [
   "1st rank in the State level Minaxi-Lalit Science Award Test (M.Sc. Physics), 2018.",
   "1st rank in the State level Minaxi-Lalit Science Award Test (M.Sc. Physics), 2017.",
   "1st rank in the State level Minaxi-Lalit Science Award Test (B.Sc. Physics), 2016."
+];
+
+const supervisedStudentsData = [
+  { 
+    name: "Akshat Pathrikar", 
+    level: "M.Sc.", 
+    topic: "M.Sc. project student at Ahmedabad University, Aug 2024-Mar 2025", 
+    publication: "arXiv:2504.01653"
+  },
+  { 
+    name: "Meet Vyas", 
+    level: "B.Tech", 
+    topic: "B.Tech project student at Ahmedabad University, Jan 2024-Jan 2025", 
+    publication: "arXiv:2501.11232"
+  },
+  { 
+    name: "Viraj Kalsariya", 
+    level: "M.Sc.", 
+    topic: "M.Sc. project student at Ahmedabad University, Jul 2023-Sep 2024", 
+    publication: "Phys. Rev. D 110, 104026 (2024)"
+  },
+  { 
+    name: "Siddharth Madan", 
+    level: "M.Sc.", 
+    topic: "M.Sc. project student at Charusat University, Sep 2023-Jan 2024", 
+    publication: "Chin. Phys. C 48, 115108 (2024)"
+  },
+  { 
+    name: "Dhruv Arora", 
+    level: "M.Sc.", 
+    topic: "M.Sc. project student at Charusat University, Jan-May 2023", 
+    publication: "Phys. Dark Univ. 44, 101487 (2024)"
+  },
+  { 
+    name: "Kauntey Acharya", 
+    level: "M.Sc.", 
+    topic: "M.Sc. project student at Charusat University, Jan 2023-Jun 2024", 
+    publication: "Phys. Rev. D 107, 064036 (2023); arXiv:2209.12610"
+  },
+  { 
+    name: "Saurabh", 
+    level: "M.Sc.", 
+    topic: "M.Sc. project student at Charusat University, Aug 2021-Mar 2023", 
+    publication: "A&A 682, A113 (2024); Phys. Rev. D 105, 023021 (2022)"
+  }
+];
+
+const conferencesData = [
+  { 
+    title: "High Energy Phenomena in Relativistic Outflows IX (HEPRO IX)", 
+    location: "Rio de Janeiro, Brazil", 
+    date: "4-8 Aug 2025", 
+    type: "attended",
+    role: "Poster presentation"
+  },
+  { 
+    title: "A. K. Raychaudhuri Centenary Year Conference", 
+    location: "Institute of Mathematical Sciences (IMSc), Chennai", 
+    date: "5-7 Oct 2023", 
+    type: "attended",
+    role: "Participant"
+  },
+  { 
+    title: "International Workshop on Relativistic Astrophysics and Gravitation (online)", 
+    location: "Astronomical Institute of Uzbekistan Academy of Sciences", 
+    date: "12-14 May 2021", 
+    type: "attended",
+    role: "Participant"
+  },
+  { 
+    title: "The 21st BritGrav meeting", 
+    location: "Relativity Group, University College Dublin, Ireland", 
+    date: "12-16 Apr 2021", 
+    type: "attended",
+    role: "Oral presentation"
+  },
+  { 
+    title: "11th Central European Relativity Seminar", 
+    location: "Vienna, Austria", 
+    date: "11-13 Feb 2021", 
+    type: "attended",
+    role: "Oral presentation"
+  },
+  { 
+    title: "31st Meeting of the Indian Association for General Relativity and Gravitation (IAGRG)", 
+    location: "IIT-Gandhinagar, Gujarat, India", 
+    date: "19-20 Dec 2020", 
+    type: "attended",
+    role: "Participant"
+  },
+  { 
+    title: "Virtual Conference of the Polish Society on Relativity 2020", 
+    location: "Poland", 
+    date: "24-26 Sep 2020", 
+    type: "attended",
+    role: "Participant"
+  },
+  { 
+    title: "International Workshop on Astrophysics and Cosmology", 
+    location: "ICC, CHARUSAT, Anand, Gujarat, India", 
+    date: "20-24 Dec 2019", 
+    type: "attended",
+    role: "Oral Presentation"
+  }
+];
+
+const workshopsData = [
+  {
+    title: "International workshop on Astrophysics and Cosmology",
+    location: "ICC, CHARUSAT",
+    date: "20-24 December 2019",
+    type: "organized",
+    role: "Organizing committee member"
+  }
+];
+
+const invitedTalksData = [
+  {
+    title: "Invited for Podcast on Black holes and Naked Singularities",
+    venue: "Physics for Students Channel, India",
+    location: "Online (YouTube)",
+    date: "25th May, 2025"
+  },
+  {
+    title: "Do We Really Know What's at the Center of Our Galaxy?",
+    venue: "IAG-USP",
+    location: "Sao Paulo, Brazil (YouTube)",
+    date: "9th April, 2025"
+  },
+  {
+    title: "Are We Sure It's a Supermassive Black Hole at the Heart of Our Galaxy?",
+    venue: "Astro and Cosmo meeting by ICTP-SAIFR",
+    location: "Sao Paulo, Brazil (YouTube)",
+    date: "4th April, 2025"
+  },
+  {
+    title: "Life of Stars and Black Holes",
+    venue: "Atal Tinkering Lab Jeevanbharti",
+    location: "Surat, India",
+    date: "28th February, 2024"
+  },
+  {
+    title: "Probing the Nature of Sgr A* at the Milky Way Galactic Center",
+    venue: "Department of Physics, IIT-Bombay",
+    location: "Mumbai, India",
+    date: "11th May, 2022"
+  }
 ];
 
 // --- Theme and Routing Logic ---
@@ -209,9 +378,9 @@ const Hero = () => {
                     <p className="text-lg md:text-2xl text-cyan-500 dark:text-cyan-400 mb-8">{personalInfo.title}</p>
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                         <div className="flex justify-center space-x-6 mb-8 text-3xl">
-                            <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"><i className="ai ai-orcid"></i></a>
-                            <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"><i className="ai ai-google-scholar"></i></a>
-                            <a href={personalInfo.links.linkedIn} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"><i className="fa-brands fa-linkedin"></i></a>
+                            <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
+                            <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" title="Google Scholar"><i className="ai ai-google-scholar"></i></a>
+                            <a href={personalInfo.links.inspireHEP} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" title="INSPIRE-HEP"><i className="ai ai-inspire"></i></a>
                         </div>
                         <a href="#contact" className="bg-cyan-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 dark:shadow-cyan-500/20">Get in Touch</a>
                     </motion.div>
@@ -228,12 +397,12 @@ const About = () => {
             <div className="container mx-auto grid md:grid-cols-3 gap-12 items-center">
                 <div className="md:col-span-1">
                     <motion.div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-slate-300 dark:bg-slate-700 overflow-hidden shadow-2xl" whileHover={{ scale: 1.05, rotate: 3 }} transition={{ type: "spring", stiffness: 300 }}>
-                        <img src="https://placehold.co/400x400/e2e8f0/475569?text=PB" alt="Dr. Parthraj Bambhaniya" className="w-full h-full object-cover" />
+                        <img src={profileImage} alt="Dr. Parthraj Bambhaniya" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
                 <div className="md:col-span-2 text-center md:text-left">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-4">About Me</h2>
-                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed">{personalInfo.about}</p>
+                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-4">Research Interests</h2>
+                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed">{personalInfo.researchInterests}</p>
                 </div>
             </div>
         </AnimatedSection>
@@ -330,6 +499,97 @@ const AchievementsPage = ({ onBack }) => {
     );
 };
 
+const SupervisedStudentsPage = ({ onBack }) => {
+    return (
+        <DetailPageLayout title="Supervised Students" onBack={onBack}>
+            {supervisedStudentsData.length > 0 ? (
+                <div className="space-y-6">
+                    {supervisedStudentsData.map((student, index) => (
+                        <div key={index} className="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                            <h3 className="text-xl font-bold text-slate-800 dark:text-white">{student.name}</h3>
+                            <p className="text-cyan-500 dark:text-cyan-400">{student.level} Student • {student.year}</p>
+                            <p className="mt-2 text-slate-600 dark:text-gray-300">{student.topic}</p>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+            )}
+        </DetailPageLayout>
+    );
+};
+
+const ConferencesWorkshopsPage = ({ onBack }) => {
+    return (
+        <DetailPageLayout title="Conferences & Workshops" onBack={onBack}>
+            <div className="space-y-12">
+                {/* Conferences Section */}
+                <div>
+                    <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 border-b border-cyan-500/30 pb-2">Conferences</h2>
+                    {conferencesData.length > 0 ? (
+                        <div className="space-y-4">
+                            {conferencesData.map((conf, index) => (
+                                <div key={index} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                    <h3 className="font-semibold text-slate-800 dark:text-white text-lg">{conf.title}</h3>
+                                    <p className="text-cyan-500 dark:text-cyan-400">{conf.location} • {conf.date}</p>
+                                    {conf.role && <p className="text-sm text-slate-600 dark:text-gray-400 mt-1">{conf.role}</p>}
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+                    )}
+                </div>
+
+                {/* Workshops Section */}
+                <div>
+                    <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 border-b border-cyan-500/30 pb-2">Workshops</h2>
+                    {workshopsData.length > 0 ? (
+                        <div className="space-y-4">
+                            {workshopsData.map((workshop, index) => (
+                                <div key={index} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                    <div className="flex items-start justify-between">
+                                        <div>
+                                            <h3 className="font-semibold text-slate-800 dark:text-white text-lg">{workshop.title}</h3>
+                                            <p className="text-cyan-500 dark:text-cyan-400">{workshop.location} • {workshop.date}</p>
+                                            {workshop.role && <p className="text-sm text-slate-600 dark:text-gray-400 mt-1">{workshop.role}</p>}
+                                        </div>
+                                        {workshop.type === "organized" && (
+                                            <span className="bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">Organized</span>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+                    )}
+                </div>
+            </div>
+        </DetailPageLayout>
+    );
+};
+
+const InvitedTalksPage = ({ onBack }) => {
+    return (
+        <DetailPageLayout title="Invited Talks" onBack={onBack}>
+            {invitedTalksData.length > 0 ? (
+                <div className="space-y-6">
+                    {invitedTalksData.map((talk, index) => (
+                        <div key={index} className="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-lg border-l-4 border-cyan-500">
+                            <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">{talk.title}</h3>
+                            <p className="text-cyan-500 dark:text-cyan-400 font-medium">{talk.venue}</p>
+                            <p className="text-slate-600 dark:text-gray-400 mt-1">{talk.location} • {talk.date}</p>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <p className="text-slate-600 dark:text-gray-300">Information to be added from CV.</p>
+            )}
+        </DetailPageLayout>
+    );
+};
+
 
 
 // --- Main Page Component ---
@@ -397,6 +657,62 @@ const MainPage = ({ setPage }) => {
                     ))}
                 </div>
             </SectionWithMoreButton>
+
+            {/* Academic Activities Grid */}
+            <AnimatedSection id="academic-activities" className="bg-slate-100 dark:bg-slate-900">
+                <div className="container mx-auto">
+                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white text-center mb-12">Academic Activities</h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {/* Supervised Students */}
+                        <motion.div 
+                            className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg cursor-pointer" 
+                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            onClick={() => setPage('students')}
+                        >
+                            <div className="flex items-center mb-4 text-cyan-400 text-3xl">
+                                <span className="w-12 text-center"><i className="fa-solid fa-user-graduate"></i></span>
+                                <h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Supervised Students</h3>
+                            </div>
+                            <p className="text-slate-600 dark:text-gray-300 mb-4">Mentoring and guiding research students</p>
+                            <button className="text-cyan-500 dark:text-cyan-400 font-semibold hover:underline flex items-center">
+                                View Details <i className="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </motion.div>
+
+                        {/* Conferences & Workshops */}
+                        <motion.div 
+                            className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg cursor-pointer" 
+                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            onClick={() => setPage('conferences')}
+                        >
+                            <div className="flex items-center mb-4 text-cyan-400 text-3xl">
+                                <span className="w-12 text-center"><i className="fa-solid fa-users"></i></span>
+                                <h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Conferences & Workshops</h3>
+                            </div>
+                            <p className="text-slate-600 dark:text-gray-300 mb-4">Participated and organized academic events</p>
+                            <button className="text-cyan-500 dark:text-cyan-400 font-semibold hover:underline flex items-center">
+                                View Details <i className="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </motion.div>
+
+                        {/* Invited Talks */}
+                        <motion.div 
+                            className="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg shadow-lg cursor-pointer" 
+                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            onClick={() => setPage('talks')}
+                        >
+                            <div className="flex items-center mb-4 text-cyan-400 text-3xl">
+                                <span className="w-12 text-center"><i className="fa-solid fa-microphone"></i></span>
+                                <h3 className="text-xl font-bold text-slate-800 dark:text-white ml-3">Invited Talks</h3>
+                            </div>
+                            <p className="text-slate-600 dark:text-gray-300 mb-4">Presentations at institutions and conferences</p>
+                            <button className="text-cyan-500 dark:text-cyan-400 font-semibold hover:underline flex items-center">
+                                View Details <i className="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </motion.div>
+                    </div>
+                </div>
+            </AnimatedSection>
             
             <AnimatedSection id="contact" className="bg-slate-50 dark:bg-slate-800">
                 <div className="container mx-auto text-center">
@@ -450,6 +766,12 @@ export default function App() {
             return <PublicationsPage onBack={() => setPage('home')} />;
         case 'achievements':
             return <AchievementsPage onBack={() => setPage('home')} />;
+        case 'students':
+            return <SupervisedStudentsPage onBack={() => setPage('home')} />;
+        case 'conferences':
+            return <ConferencesWorkshopsPage onBack={() => setPage('home')} />;
+        case 'talks':
+            return <InvitedTalksPage onBack={() => setPage('home')} />;
         default:
             return <MainPage setPage={setPage} />;
     }

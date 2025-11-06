@@ -1,0 +1,416 @@
+{
+  "cv_context": {
+    "personal_information": {
+      "section_title": "Personal Informations [cite: 2]",
+      "name": "Parthraj Bambhaniya [cite: 3]",
+      "nationality": "Indian [cite: 3]",
+      "date_of_birth": "26/08/1994 [cite: 3]",
+      "current_affiliation": "FAPESP Postdoctoral Fellow, Institute of Astronomy, Geophysics and Atmospheric Sciences (IAG), University of Sao Paulo (USP), Brazil. [cite: 3]",
+      "current_address": "Office: F310, IAG, USP, Rua do Matao, 1226, Butanta, 05508090 - Sao Paulo, SP - Brazil [cite: 3]",
+      "google_scholar_link": "Dr. Parth Bambhaniya [cite: 3]",
+      "inspire_hep_link": "Parth Bambhaniya [cite: 3]",
+      "email": "grcollapse@gmail.com/ parth.bambhaniya@usp.br [cite: 3]"
+    },
+    "education_research_experience": {
+      "section_title": "Education / Research Experience [cite: 4]",
+      "history": [
+        {
+          "duration": "2024-Present [cite: 6]",
+          "detail": "FAPESP Postdoctoral Fellow (Project: High Energy Processes around Black Holes and Jets), Institute of Astronomy, Geophysics and Atmospheric Sciences (IAG), University of Sao Paulo (USP), Brazil. [cite: 6]"
+        },
+        {
+          "duration": "2023-2024 [cite: 6]",
+          "detail": "Research Associate (Project: Astrophysics of Black holes and Spacetime Singularities), International Centre for Space and Cosmology, Ahmedabad University, India. [cite: 6]"
+        },
+        {
+          "duration": "2018-2023 [cite: 6]",
+          "detail": "Ph.D. in Physics (Astrophysics, Thesis: A Study of Black Holes and Beyond), P.D. Patel Institute of Applied Sciences, Charotar University of Science and Technology, India. [cite: 6]"
+        },
+        {
+          "duration": "2016-2018 [cite: 6]",
+          "detail": "M.Sc. in Physics (First class), Department of Physics, M. K. Bhavnagar University, India. [cite: 6]"
+        },
+        {
+          "duration": "2013-2016 [cite: 6]",
+          "detail": "B.Sc. in Physics (First class with Distinction), P. P. Institute of Science College, M. K. Bhavnagar University, India. [cite: 6]"
+        },
+        {
+          "duration": "2012-2013 [cite: 6]",
+          "detail": "10+2 Grade (First class), Gujarat Board of Higher Secondary Education, India. [cite: 6]"
+        },
+        {
+          "duration": "2009-2010 [cite: 6]",
+          "detail": "10th Grade (First class with Distinction), Gujarat Board of Secondary Education, India. [cite: 6]"
+        }
+      ]
+    },
+    "research_interests": {
+      "section_title": "Research Field / Interests [cite: 9]",
+      "summary": "My research interests span theoretical, computational, and observational aspects of Black holes and supermassive compact objects. [cite: 10]",
+      "key_areas": [
+        "Astrophysical black holes and spacetime singularities [cite: 11]",
+        "Shadows and accretion disk properties [cite: 11]",
+        "Supermassive compact objects [cite: 11]",
+        "General theory of relativity [cite: 11]",
+        "Relativistic jets and high-energy outflows [cite: 11]",
+        "Relativistic orbits and precession of S-stars [cite: 11]",
+        "Relativistic time delays and pulsar timings [cite: 11]",
+        "Gravitational collapse [cite: 11]",
+        "tidal disruption events [cite: 11]",
+        "Energy extraction from ultra-strong gravity regions [cite: 11]",
+        "Gamma-ray bursts and high-energy transients [cite: 11]",
+        "Magnetohydrodynamics (MHD) [cite: 11]",
+        "general relativistic MHD (GRMHD) [cite: 11]",
+        "Plasma astrophysics and magnetized accretion flows [cite: 11]"
+      ]
+    },
+    "skills": {
+      "section_title": "Skills [cite: 12]",
+      "programming_languages": [
+        "C/C++ [cite: 13]",
+        "Python [cite: 13]",
+        "FORTRAN [cite: 13]",
+        "Mathematica [cite: 13]"
+      ],
+      "numerical_computational_techniques": [
+        "Ray-tracing formalism for black hole and compact object imaging (Brahma code) [cite: 14]",
+        "radiative transfer modeling in accretion flows (RIAF models) [cite: 14]",
+        "MHD and GRMHD simulations (PLUTO, Athena++) [cite: 14]",
+        "Numerical Astrophysics [cite: 14]"
+      ],
+      "software_tools": [
+        "LaTeX [cite: 15]",
+        "Linux [cite: 15]",
+        "Mac [cite: 15]",
+        "Windows [cite: 15]",
+        "MS Office [cite: 15]"
+      ]
+    },
+    "research_advisors": {
+      "section_title": "Research Advisors [cite: 16]",
+      "advisors": [
+        {
+          "role": "FAPESP Postdoc Advisor [cite: 17]",
+          "name": "Prof. Elisabete Maria de Gouveia Dal Pino [cite: 17]",
+          "details": "Full Professor, IAG, University of Sao Paulo, Brazil. [cite: 19]"
+        },
+        {
+          "role": "PhD Supervisor [cite: 18]",
+          "name": "Prof. Pankaj S. Joshi [cite: 20]",
+          "details": "Founding Director, ICSC [cite: 21], Distinguished Professor, Ahmedabad University, India. [cite: 22]"
+        }
+      ]
+    },
+    "publications": {
+      "section_title": "Published and Submitted research articles [cite: 23]",
+      "orcid_id": "https://orcid.org/0000-0001-8424-3357 [cite: 24]",
+      "articles": [
+        {
+          "id": 1,
+          "citation": "P. Bambhaniya, A. B. Joshi, D. Dey and P. S. Joshi, \"Timelike geodesics in Naked Singularity and Black Hole Spacetimes,\" Phys. Rev. D 100, 2019, 124020. [cite: 25, 26]"
+        },
+        {
+          "id": 2,
+          "citation": "D. Dey, P. S. Joshi, A. B. Joshi and P. Bambhaniya, \"Towards an Observational test of Black Hole versus Naked Singularity at the Galactic Center,\" Int. J. Mod. Phys. D. 28, 2019, 1930024. [cite: 27, 28]"
+        },
+        {
+          "id": 3,
+          "citation": "A. B. Joshi, D. Dey, P. S. Joshi and P. Bambhaniya \"Shadow of a Naked Singularity without Photon Sphere,\" Phys. Rev. D 102, 2020, 024022. [cite: 29, 30]"
+        },
+        {
+          "id": 4,
+          "citation": "P. Bambhaniya, D. N. Solanki, D. Dey, A. B. Joshi, P. S. Joshi and V. Patel \"Precession of timelike bound orbits in Kerr spacetime,\" Eur. Phys. J. C 81, 2021, 205. [cite: 31, 32]"
+        },
+        {
+          "id": 5,
+          "citation": "P. Bambhaniya, D. Dey, A. B. Joshi, P. S. Joshi D. N. Solanki, and A. Mehta \"Shadows and negative precession in non-Kerr spacetime,\" Phys. Rev. D 103, 2021, 084005. [cite: 33, 34]"
+        },
+        {
+          "id": 6,
+          "citation": "P. Bambhaniya, S. K, K. Jusufi and P. S. Joshi, \"Thin accretion disk in the Simpson-Visser black-bounce and wormhole spacetime,\" Phys. Rev. D 105, 2022, 023021. [cite: 36, 37]"
+        },
+        {
+          "id": 7,
+          "citation": "D. N. Solanki, P. Bambhaniya, D. Dey, P. S. Joshi and K. N. Pathak, \"Shadows and precession of orbits in rotating Janis-Newman-Winicour spacetime,\" Eur. Phys. J. C 82, 2022, 77. [cite: 38, 39]"
+        },
+        {
+          "id": 8,
+          "citation": "V. Patel, K. Acharya, P. Bambhaniya, P. S. Joshi, \"Rotational energy extraction from the Kerr black hole's mimickers,\" Universe 8. 2022, 571. [cite: 40]"
+        },
+        {
+          "id": 9,
+          "citation": "V. Patel, K. Acharya, P. Bambhaniya, P. S. Joshi, \"Energy extraction from Janis-Newman-Winicour naked singularity,\" Phys. Rev. D 107, 2023, 064036. [cite: 41, 42]"
+        },
+        {
+          "id": 10,
+          "citation": "P. Bambhaniya, J. S. Verma, D. Dey, P. S. Joshi and A. B. Joshi, \"Lense-Thirring effect and precession of timelike geodesics in slowly rotating black hole and naked singularity spacetimes,\" Phys. Dark. Univ. 40, 2023, 101215. [cite: 43, 44]"
+        },
+        {
+          "id": 11,
+          "citation": "S. Vagnozzi, R. Roy, Yu-Dai Tsai, L. Visinelli, M. Afrin, A. Allahyari, P. Bambhaniya, D. Dey, S. G. Ghosh, P. S. Joshi, K. Jusufi, M. Khodadi, R. K. Walia, A. Övgün, C. Bambi, \"Horizon-scale tests of gravity theories and fundamental physics from the Event Horizon Telescope image of Sagittarius A*,\" Class. Quant. Grav. 40, 2023, 165007. [cite: 45, 46]"
+        },
+        {
+          "id": 12,
+          "citation": "Saurabh, P. Bambhaniya and P. S. Joshi, \"Imaging ultra-compact objects with radiative inefficient accretion flows,\" Astronomy and Astrophysics 682, 2024, A113. [cite: 47]"
+        },
+        {
+          "id": 13,
+          "citation": "P. Bambhaniya, A. B. Joshi, D. Dey, P. S. Joshi, A. Mazumdar, T. Harada, K. Nakao, \"Relativistic orbits of S2 star in the presence of scalar field,\" Eur. Phys. J. C, 84, 2024, 124. [cite: 48, 49]"
+        },
+        {
+          "id": 14,
+          "citation": "D. Arora, P. Bambhaniya, D. Dey and P. S. Joshi, \"Tidal forces in the Simpson-Visser black-bounce and wormhole spacetimes,\" Phys. Dark. Univ. 44, 2024, 101487. [cite: 50, 51]"
+        },
+        {
+          "id": 15,
+          "citation": "S. Madan, P. Bambhaniya, \"Tidal force effects and periodic orbits in null naked singularity spacetime,\" Chin. Phys. C 48, 2024, 11, 115108. [cite: 52, 53]"
+        },
+        {
+          "id": 16,
+          "citation": "P. Bambhaniya, O. Trivedi, I. Dymnikova, P. S. Joshi, and M. Khlopov, \"On the interactions of black holes and cosmic strings,\" Phys. Dark. Univ. 46, 2024, 101553. [cite: 54, 55]"
+        },
+        {
+          "id": 17,
+          "citation": "V. Kalsariya, P. Bambhaniya, P. S. Joshi, \"Relativistic time delay analysis of pulsar signals near ultra-compact objects,\" Phys. Rev. D 110, 2024, 104026. [cite: 56, 57]"
+        },
+        {
+          "id": 18,
+          "citation": "V. Vertogradov, P. Bambhaniya, M. Misyura, \"Influence of primary hair and plasma on intensity distribution of black hole shadows,\" Eur. Phys. J. Plus 140, 2025, 23 [cite: 58, 59]"
+        },
+        {
+          "id": 19,
+          "citation": "P. Bambhaniya, M. Vyas, P. S. Joshi, and E. M. de Gouveia Dal Pino, \"Retrograde Precession of Relativistic Orbits and the Quest for Charged Black Holes,\" Phys. Dark. Univ. 48, 2025, 101949. [cite: 60, 61]"
+        },
+        {
+          "id": 20,
+          "citation": "P. Bambhaniya, V. Kalsariya, Saurabh, E. M. de Gouveia Dal Pino, Ivan De Martino, Riccardo Della Monica, and Mariafelicia De Laurentis \"Time Delay of Pulsar Signals in Astrophysical Black Hole Spacetimes,\" Phys. Dark. Univ. 49, 2025, 10203649. [cite: 62, 63]"
+        },
+        {
+          "id": 21,
+          "citation": "P. Bambhaniya, Saurabh and E. M. de Gouveia Dal Pino, \"Shadow Formation Conditions Beyond the Kerr Black Hole Paradigm,\" accepted for publication in Symmetry. [cite: 64]"
+        },
+        {
+          "id": 22,
+          "citation": "P. Bambhaniya, \"A Study of Black Holes and Beyond: Shadows and Relativistic Orbits,\" arXiv:2406.01202 [gr-qc. [cite: 65]"
+        },
+        {
+          "id": 23,
+          "citation": "A. B. Joshi, P. Bambhaniya, D. Dey and P. S. Joshi, \"Timelike Geodesics in Naked Singularity and Black Hole Spacetimes II,\" arXiv:1909.08873 [gr-qc]. [cite: 66]"
+        },
+        {
+          "id": 24,
+          "citation": "Saurabh, P. Bambhaniya, P. S. Joshi, \"Probing the Shadow Image of the Sagittarius A* with Event Horizon Telescope,\" arXiv:2202.00588 [gr-qc]. [cite: 68]"
+        },
+        {
+          "id": 25,
+          "citation": "K. Acharya, P. Bambhaniya, P. S. Joshi, K. Pandey, and V. Patel, \"High Energy Particle Collisions in the vicinity of Naked Singularity,\" arXiv:2209.12610 [gr-qe]. [cite: 69]"
+        },
+        {
+          "id": 26,
+          "citation": "A. Pathrikar, P. Bambhaniya, P. S. Joshi, and E. M. de Gouveia Dal Pino, \"Quasinormal Modes and Stability Analysis of the JMN-1 Naked Singularity,\" arXiv: 2504.01653 [gr-qc]. [cite: 70]"
+        }
+      ]
+    },
+    "notable_achievements": {
+      "section_title": "Notable Achievements [cite: 71]",
+      "achievements": [
+        "FAPESP Postdoctoral Fellowship, Grant No. 2024/09383-4, IAG, Sao Paulo University, Brazil, 2024. [cite: 72]",
+        "The CHARUSAT Research paper Award for the paper entitled \"Precession of timelike bound orbits in Kerr spacetime by Charusat University, 2023. [cite: 73]",
+        "The CHARUSAT Research paper Award for the paper entitled \"Timelike bound orbits in the black hole and naked singularity spacetimes\" by Charusat University, 2022. [cite: 74]",
+        "Young Researcher Award by National Institute of Scholars, Bangalore, 2020. [cite: 75]",
+        "All India Rank-107 in the National level Joint Entrance Screening Test (JEST) for Physics, 2018. [cite: 76]",
+        "1st rank in the State level Minaxi-Lalit Science Award Test (M.Sc. Physics) by Gujarat Science Academy, 2018. [cite: 77]",
+        "1st rank in the State level Minaxi-Lalit Science Award Test (M.Sc. Physics) by Gujarat Science Academy, 2017. [cite: 78]",
+        "Ist rank in the State level Minaxi-Lalit Science Award Test (B.Sc. Physics) by Gujarat Science Academy, 2016. [cite: 79]"
+      ]
+    },
+    "teaching_experience": {
+      "section_title": "Teaching Experience [cite: 80]",
+      "roles": [
+        {
+          "role": "Teaching Assistant [cite: 81]",
+          "course": "Engineering Physics Lab (B.Tech-IT) [cite: 81]",
+          "period": "January-May 2023-24 [cite: 81]",
+          "hours": "192 hours [cite: 81]",
+          "institution": "DEPSTAR, Charusat University [cite: 81]"
+        },
+        {
+          "role": "Course coordinator [cite: 82]",
+          "course": "Research Project-III, Astrophysics (M.Sc.) [cite: 82]",
+          "period": "Jan-May 2023-24 [cite: 82]",
+          "hours": "120 hours [cite: 82]",
+          "institution": "PDPIAS, ICC, Charusat University [cite: 82]"
+        },
+        {
+          "role": "Course coordinator [cite: 83]",
+          "course": "Research Project-II, Astrophysics (M.Sc.) [cite: 83]",
+          "period": "Jul-Dec 2022-23 [cite: 83]",
+          "hours": "80 hours [cite: 83]",
+          "institution": "PDPIAS, ICC, Charusat University [cite: 83]"
+        },
+        {
+          "role": "Teaching Assistant [cite: 84]",
+          "course": "Astrophysics, Space and Cosmology (University elective) [cite: 84]",
+          "period": "Jan-May 2021-22 [cite: 84]",
+          "hours": "30 hours [cite: 84]",
+          "institution": "PDPIAS, ICC, Charusat University [cite: 84]"
+        },
+        {
+          "role": "Teaching Assistant [cite: 85]",
+          "course": "General Theory of Relativity (Intro + Advanced) [cite: 85]",
+          "period": "Jan-May 2020-21 [cite: 85]",
+          "hours": "20 hours [cite: 85]",
+          "institution": "PDPIAS, ICC, Charusat University [cite: 85]"
+        },
+        {
+          "role": "Teaching Assistant [cite: 86]",
+          "course": "Special Theory of Relativity (Full course including tensor and vector calculus) [cite: 86]",
+          "period": "Jul-Dec 2019-20 [cite: 86]",
+          "hours": "20 hours [cite: 86]",
+          "institution": "PDPIAS, ICC, Charusat University [cite: 86]"
+        }
+      ]
+    },
+    "supervised_students": {
+      "section_title": "Supervised Students [cite: 87]",
+      "students": [
+        {
+          "name": "Akshat Pathrikar [cite: 88]",
+          "details": "M.Sc. project student at Ahmedabad University, Aug 2024-Mar 2025. [cite: 88]",
+          "publication": "arXiv:2504.01653. [cite: 88]"
+        },
+        {
+          "name": "Meet Vyas [cite: 90]",
+          "details": "B.Tech project student at Ahmedabad University, Jan 2024-Jan 2025. [cite: 90]",
+          "publication": "arXiv:2501.11232. [cite: 90]"
+        },
+        {
+          "name": "Viraj Kalsariya [cite: 91]",
+          "details": "M.Sc. project student at Ahmedabad University, Jul 2023-Sep 2024. [cite: 91]",
+          "publication": "Phys. Rev. D 110, 104026 (2024). [cite: 91]"
+        },
+        {
+          "name": "Siddharth Madan [cite: 92]",
+          "details": "M.Sc. project student at Charusat University, Sep 2023-Jan 2024. [cite: 92]",
+          "publication": "Chin. Phys. C 48, 115108 (2024). [cite: 92]"
+        },
+        {
+          "name": "Dhruv Arora [cite: 93]",
+          "details": "M.Sc. project student at Charusat University, Jan-May 2023. [cite: 93]",
+          "publication": "Phys. Dark Univ. 44, 101487 (2024). [cite: 93]"
+        },
+        {
+          "name": "Kauntey Acharya [cite: 94]",
+          "details": "M.Sc. project student at Charusat University, Jan 2023-Jun 2024. [cite: 94]",
+          "publications": "Phys. Rev. D 107, 064036 (2023); arXiv:2209.12610. [cite: 94]"
+        },
+        {
+          "name": "Saurabh [cite: 95]",
+          "details": "M.Sc. project student at Charusat University, Aug 2021-Mar 2023. [cite: 95]",
+          "publications": "A&A 682, A113 (2024); Phys. Rev. D 105, 023021 (2022). [cite: 95, 96]"
+        }
+      ]
+    },
+    "conferences_and_workshops": {
+      "section_title": "Conferences and Workshops [cite: 97]",
+      "events": [
+        {
+          "date": "4-8 Aug 2025 [cite: 98]",
+          "description": "Poster presentation at High Energy Phenomena in Relativistic Outflows IX (HEPRO IX), Rio de Janeiro, Brazil. [cite: 98]"
+        },
+        {
+          "date": "5-7 Oct 2023 [cite: 99]",
+          "description": "Participated in A. K. Raychaudhuri Centenary Year Conference, Institute of Mathematical Sciences (IMSc), Chennai. [cite: 99]"
+        },
+        {
+          "date": "11 May 2022 [cite: 100]",
+          "description": "Invited talk Probing the nature of Sgr A* at the Milky Way Galactic Center, Department of Physics, IIT Bombay, Mumbai. [cite: 100]"
+        },
+        {
+          "date": "12-14 May 2021 [cite: 101]",
+          "description": "Participated in International Workshop on Relativistic Astrophysics and Gravitation (online), Astronomical Institute of Uzbekistan Academy of Sciences. [cite: 101]"
+        },
+        {
+          "date": "12-16 Apr 2021 [cite: 102]",
+          "description": "Oral presentation at The 21st BritGrav meeting, Relativity Group, University College Dublin, Ireland. [cite: 102]"
+        },
+        {
+          "date": "11-13 Feb 2021 [cite: 103]",
+          "description": "Oral presentation at 11th Central European Relativity Seminar, Vienna, Austria. [cite: 103]"
+        },
+        {
+          "date": "19-20 Dec 2020 [cite: 104]",
+          "description": "Participated in 31st Meeting of the Indian Association for General Relativity and Gravitation (IAGRG), IIT-Gandhinagar, Gujarat, India. [cite: 104]"
+        },
+        {
+          "date": "24-26 Sep 2020 [cite: 105]",
+          "description": "Participated in Virtual Conference of the Polish Society on Relativity 2020, Poland. [cite: 105]"
+        },
+        {
+          "date": "20-24 Dec 2019 [cite: 106]",
+          "description": "Oral Presentation at International Workshop on Astrophysics and Cosmology, ICC, CHARUSAT, Anand, Gujarat, India. [cite: 106]"
+        }
+      ]
+    },
+    "invited_talks": {
+      "section_title": "Invited Talks [cite: 108]",
+      "talks": [
+        {
+          "date": "25th May, 2025 [cite: 109]",
+          "description": "Invited for Podcast on Black holes and Naked Singularities by Physics for Students Channel, India. Youtube link. [cite: 109]"
+        },
+        {
+          "date": "9th April, 2025 [cite: 109]",
+          "description": "Invited talk on Do We Really Know What's at the Center of Our Galaxy? by IAG-USP, Sao Paulo, Brazil. Youtube link. [cite: 109]"
+        },
+        {
+          "date": "4th April, 2025 [cite: 109]",
+          "description": "Invited talk on Are We Sure It's a Supermassive Black Hole at the Heart of Our Galaxy? at Astro and Cosmo meeting by ICTP-SAIFR, Sao Paulo, Brazil Youtube link. [cite: 109]"
+        },
+        {
+          "date": "28th February, 2024 [cite: 109]",
+          "description": "Invited talk on Life of Stars and Black Holes by Atal Tinkering Lab Jeevanbharti, Surat, India [cite: 109]"
+        },
+        {
+          "date": "11th May, 2022 [cite: 109]",
+          "description": "Invited talk on Probing the Nature of Sgr A* at the Milky Way Galactic Center by Department of Physics, IIT-Bombay, Mumbai, India [cite: 109]"
+        }
+      ]
+    },
+    "workshop_organized": {
+      "section_title": "Workshop organized [cite: 110]",
+      "events": [
+        "One of the organizing committee member of 'International workshop on Astrophysics and Cosmology' 20-24 December-2019 (Venue: ICC, CHARUSAT). [cite: 111]"
+      ]
+    },
+    "references": {
+      "section_title": "References [cite: 112]",
+      "contacts": [
+        {
+          "name": "Prof. Pankaj S. Joshi [cite: 113]",
+          "details": "(Distinguished Professor, TWAS Fellow and Founding director of ICSC) International Centre for Space and Cosmology (ICSC), Ahmedabad University, Gujarat 38009, India [cite: 113]",
+          "email": "psjcosmos@gmail.com [cite: 114]",
+          "google_scholar": "Pankaj S. Joshi [cite: 115]"
+        },
+        {
+          "name": "Prof. Elisabete Maria de Gouveia Dal Pino [cite: 116]",
+          "details": "(Full Professor, TWAS fellow) Office: F302, Instituto de Astronomia, Geofísica e Ciências Atmosféricas (IAG-USP) Universidade de Sao Paulo, R. do Matão, 1226, 05508-090, Sao Paulo, SP, Brasil. [cite: 116]",
+          "email": "dalpino@iag.usp.br [cite: 117]",
+          "google_scholar": "Elisabete M. de Gouveia Dal Pino [cite: 118]"
+        },
+        {
+          "name": "Dr. Sunny Vagnozzi [cite: 119]",
+          "details": "(Assistant Professor) Department of Physics, University of Trento, 38123 Povo (TN), Italy [cite: 119]",
+          "email": "sunny.vagnozzi@unitn.it [cite: 119]",
+          "google_scholar": "Sunny Vagnozzi [cite: 120]"
+        },
+        {
+          "name": "Dr. Dipanjan Dey [cite: 121]",
+          "details": "(Post-Doctoral fellow) Department of Mathematics and Statistics, Dalhousie University, Halifax, Nova Scotia, Canada B3H 3J5 [cite: 122]",
+          "email": "deydipanjan7@gmail.com [cite: 123]",
+          "google_scholar": "Dipanjan Dey [cite: 124]"
+        }
+      ]
+    }
+  }
+}
