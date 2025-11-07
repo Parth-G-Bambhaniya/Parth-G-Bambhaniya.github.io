@@ -703,7 +703,7 @@ const MainPage = ({ setPage }) => {
               href={`https://doi.org/${pub.doi}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-500 hover:underline ml-2"
+              className="text-blue-400 hover:text-red-500 hover:underline ml-2"
             >
               [DOI]
             </a>
@@ -713,7 +713,7 @@ const MainPage = ({ setPage }) => {
               href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-500 hover:underline ml-2"
+              className="text-blue-400 hover:text-red-500 hover:underline ml-2"
             >
               [arXiv]
             </a>
