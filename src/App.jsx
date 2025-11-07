@@ -7,7 +7,7 @@ import backgroundImage from './assets/background_image.jpg';
 // --- Data extracted from CV (Expanded for detail pages) ---
 
 const personalInfo = {
-  name: "Parth Bambhaniya",
+  name: "Parth Bambhaniya.",
   title: "FAPESP Postdoctoral Fellow | Department of Astronomy-IAG, University of São Paulo, Brazil",
   email: "grcollapse@gmail.com / parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
