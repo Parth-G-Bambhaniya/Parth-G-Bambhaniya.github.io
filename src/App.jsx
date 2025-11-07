@@ -23,7 +23,7 @@ const experienceData = [
   {
     duration: "2024-Present",
     role: "FAPESP Postdoctoral Fellow",
-    Mentor: "Elisabete M. de Gouveia Dal Pino",
+    mentor: "Elisabete M. de Gouveia Dal Pino",
     institution: "Department of Astronomy-IAG, University of São Paulo, Brazil",
     description: "Project: High Energy Processes around Black Holes and Jets."
   },
