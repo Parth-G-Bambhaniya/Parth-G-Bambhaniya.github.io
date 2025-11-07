@@ -3,7 +3,6 @@ import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import profileImage from './assets/Profile_Picture.jpg';
 import backgroundImage from './assets/background_image.jpg';
-import shadowImage from './assets/Shadowmodel.png';
 import shadowImage1 from './assets/Shadowmodel1.png';
 import shadowImage2 from './assets/Shadowmodel2.png';
 import wmkeckImage from './assets/WMKeckorbit.png';
@@ -407,11 +406,10 @@ const About = () => {
     { src: wmkeckImage, caption: "Astrometric data of S-star orbits" },
     { src: s2orbitImage, caption: "S2 star orbit around the Sgr A*" },
     { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
-    { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
-    { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
-    { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole" },
+    { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes"},
+    { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole"},
     { src: jmnorbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
-    { src: collapseImage, caption: "Gravitational collapse of inhomogeneous dust" },
+    { src: collapseImage, caption: "Inhomogeneous dust gravitationl collapse"},
     
   ];
 
