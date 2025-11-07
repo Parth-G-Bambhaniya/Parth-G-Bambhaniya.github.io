@@ -9,7 +9,7 @@ import backgroundImage from './assets/background_image.jpg';
 const personalInfo = {
   name: "Parth Bambhaniya",
   title: "PhD | FAPESP Postdoctoral Fellow | IAG, University of São Paulo, Brazil",
-  quote: "Where spacetime curvature shapes darkness, every photon that escapes carries the truth of gravity",
+  quote: "Where gravity shapes darkness, every photon that escapes carries the truth of spacetime",
   email: "parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
   researchInterests: "Astrophysics of Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
@@ -373,7 +373,7 @@ const Hero = () => {
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight text-white">{personalInfo.name}</h1>
                     <p className="text-lg md:text-2xl text-cyan-400 mb-8">{personalInfo.title}</p>
-                    <p className="text-lg md:text-2xl text-cyan-400 mb-8">{personalInfo.quote}</p>
+                    <p className="text-lg md:text-2xl text-white-400 mb-8">{personalInfo.quote}</p>
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                         <div className="flex justify-center space-x-6 mb-8 text-3xl">
                             <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
