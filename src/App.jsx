@@ -3,9 +3,9 @@ import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import profileImage from './assets/Profile_Picture.jpg';
 import backgroundImage from './assets/background_image.jpg';
-import shadowImage from './assets/research/Shadowmodel.png';
-import wmkeckImage from './assets/research/WMKeckorbit.png';
-import orbitImage from './assets/research/JNWorbit1.png';
+import shadowImage from './assets/Shadowmodel.png';
+import wmkeckImage from './assets/WMKeckorbit.png';
+import orbitImage from './assets/JNWorbit1.png';
 
 
 
