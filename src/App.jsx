@@ -477,19 +477,49 @@ const ExperiencePage = ({ onBack }) => {
 
 
 const PublicationsPage = ({ onBack }) => {
-    return (
-        <DetailPageLayout title="Complete Publication List" onBack={onBack}>
-             <ol className="list-decimal space-y-6 pl-6">
-                {fullPublicationsList.map((pub, index) => (
-                    <li key={index}>
-                        <h3 className="font-semibold text-white text-xl">{pub.title}</h3>
-                        <p className="text-cyan-400">{pub.journal}</p>
-                    </li>
-                ))}
-            </ol>
-        </DetailPageLayout>
-    );
+  return (
+    <DetailPageLayout title="Complete Publication List" onBack={onBack}>
+      <ol className="list-decimal space-y-6 pl-6">
+        {fullPublicationsList.map((pub, index) => (
+          <li key={index}>
+            <h3 className="font-semibold text-white text-xl">{pub.title}</h3>
+            <p className="text-cyan-400">{pub.journal}</p>
+
+            {/* --- Add DOI link if available --- */}
+            {pub.doi && (
+              <p className="text-sm text-gray-300 mt-1">
+                DOI:{" "}
+                <a
+                  href={pub.doi}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-500 hover:underline"
+                >
+                  {pub.doi}
+                </a>
+              </p>
+            )}
+
+            {/* --- Optional: Add arXiv link if present --- */}
+            {pub.journal?.includes("arXiv") && (
+              <p className="text-sm text-gray-300 mt-1">
+                <a
+                  href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-500 hover:underline"
+                >
+                  [View on arXiv]
+                </a>
+              </p>
+            )}
+          </li>
+        ))}
+      </ol>
+    </DetailPageLayout>
+  );
 };
+
 
 
 const AchievementsPage = ({ onBack }) => {
