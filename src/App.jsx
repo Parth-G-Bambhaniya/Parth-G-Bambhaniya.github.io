@@ -376,7 +376,7 @@ const Hero = () => {
                     <p className="text-lg md:text-2xl text-white-400 mb-8">{personalInfo.quote}</p>
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                         <div className="flex justify-center space-x-6 mb-8 text-3xl">
-                            <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
+                            <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-green-300 hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
                             <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="Google Scholar"><i className="ai ai-google-scholar"></i></a>
                             <a href={personalInfo.links.inspireHEP} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="INSPIRE-HEP"><i className="ai ai-inspire"></i></a>
                         </div>
