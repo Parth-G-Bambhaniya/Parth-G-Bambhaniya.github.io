@@ -404,7 +404,7 @@ const Hero = () => {
 const About = () => {
   const researchImages = [
     { src: shadowImage2, caption: "Comparative shadow images: Naked singularity vs Black hole" },
-    { src: wmkeckImage, caption: "Astrometric data of relativistic orbits of S-stars" },
+    { src: wmkeckImage, caption: "Astrometric data of relativistic orbits of S-stars, Credit: W.M.Keck/UCLA" },
     { src: s2orbitImage, caption: "Naked singularity model fitting with S2 star data" },
     { src: pulsarImage, caption: "Time delay of pulsar signals probes the causal structure of galactic center" },
     { src: shadowImage1, caption: "Simulated thin accretion disks of singular vs regular Black Holes"},
