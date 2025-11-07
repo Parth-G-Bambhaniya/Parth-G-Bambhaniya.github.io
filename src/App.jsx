@@ -10,7 +10,7 @@ import wmkeckImage from './assets/WMKeckorbit.png';
 import orbitImage from './assets/JNWorbit1.png';
 import s2orbitImage from './assets/S2orbit.png';
 import pulsarImage from './assets/Pulsartiming.png';
-import penroseImage from './assets/nullpenrose.png';
+import deformImage from './assets/Deform.png';
 
 
 
@@ -410,7 +410,7 @@ const About = () => {
     { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
     { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
     { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
-    { src: penroseImage, caption: "Penrose diagram of null naked singularity" },
+    { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole" },
     
   ];
 
