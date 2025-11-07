@@ -7,11 +7,11 @@ import shadowImage from './assets/Shadowmodel.png';
 import shadowImage1 from './assets/Shadowmodel1.png';
 import shadowImage2 from './assets/Shadowmodel2.png';
 import wmkeckImage from './assets/WMKeckorbit.png';
-import orbitImage from './assets/JNWorbit1.png';
 import s2orbitImage from './assets/S2orbit.png';
 import pulsarImage from './assets/Pulsartiming.png';
 import deformImage from './assets/Deform.png';
 import jmnorbitImage from './assets/orbitjmn.png';
+import collapseImage from './assets/collapse.png';
 
 
 
@@ -409,9 +409,9 @@ const About = () => {
     { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
     { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
     { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
-    { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
     { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole" },
-    { src: jmnorbitImage, caption: "Relativistic orbits in non-vacuum, horizonless spacetime" },
+    { src: jmnorbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
+    { src: collapseImage, caption: "Gravitational collapse of inhomogeneous dust" },
     
   ];
 
