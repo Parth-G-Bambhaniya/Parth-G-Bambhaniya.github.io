@@ -813,7 +813,11 @@ export default function App() {
                     {renderPage()}
                 </AnimatePresence>
             </main>
-            <Footer />
+           <Footer />
+
+            <p className="text-center text-xs text-gray-300 opacity-70 py-2 relative z-10">
+              Background image courtesy: ESO /M. Kornmesser
+            </p>
         </div>
     </div>
   )
