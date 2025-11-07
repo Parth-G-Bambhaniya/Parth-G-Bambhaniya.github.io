@@ -470,13 +470,6 @@ const About = () => {
 };
 
 
-      </div>
-      </div>
-    </AnimatedSection>
-  );
-};
-
-
 
 const SectionWithMoreButton = ({ id, title, children, onMoreClick }) => {
     return (
