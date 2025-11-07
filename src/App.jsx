@@ -4,8 +4,14 @@ import { useInView } from 'react-intersection-observer';
 import profileImage from './assets/Profile_Picture.jpg';
 import backgroundImage from './assets/background_image.jpg';
 import shadowImage from './assets/Shadowmodel.png';
+import shadowImage1 from './assets/Shadowmodel1.png';
+import shadowImage2 from './assets/Shadowmodel2.png';
 import wmkeckImage from './assets/WMKeckorbit.png';
 import orbitImage from './assets/JNWorbit1.png';
+import s2orbitImage from './assets/S2orbit.png';
+import rvs2Image from './assets/RVS2.png';
+import pulsarImage from './assets/Pulsartiming.png';
+
 
 
 
