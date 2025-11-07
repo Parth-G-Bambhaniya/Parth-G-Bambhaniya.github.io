@@ -3,6 +3,11 @@ import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import profileImage from './assets/Profile_Picture.jpg';
 import backgroundImage from './assets/background_image.jpg';
+import shadowImage from './assets/research/Shadowmodel.png';
+import wmkeckImage from './assets/research/WMKeckorbit.png';
+import orbitImage from './assets/research/JNWorbit1.png';
+
+
 
 // --- Data extracted from CV (Expanded for detail pages) ---
 
@@ -390,22 +395,61 @@ const Hero = () => {
 
 
 const About = () => {
-    return (
-        <AnimatedSection id="about" className="bg-slate-900/60 backdrop-blur-sm relative">
-            <div className="container mx-auto grid md:grid-cols-3 gap-12 items-center">
-                <div className="md:col-span-1">
-                    <motion.div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-slate-700 overflow-hidden shadow-2xl" whileHover={{ scale: 1.05, rotate: 3 }} transition={{ type: "spring", stiffness: 300 }}>
-                        <img src={profileImage} alt="Dr. Parthraj Bambhaniya" className="w-full h-full object-cover" />
-                    </motion.div>
+  // array of images + captions (use the imports above)
+  const researchImages = [
+    { src: shadowImage, caption: "Shadow imaging models: Naked Singularities" },
+    { src: wmkeckImage, caption: "S-star orbit astrometry" },
+    { src: orbitImage, caption: "Relativistic orbit simulation in the naked singularity spacetime" }
+  ];
+
+  return (
+    <AnimatedSection id="about" className="bg-slate-900/60 backdrop-blur-sm relative">
+      <div className="container mx-auto grid md:grid-cols-3 gap-12 items-start">
+        {/* Left: profile image */}
+        <div className="md:col-span-1">
+          <motion.div
+            className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-slate-700 overflow-hidden shadow-2xl"
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <img src={profileImage} alt="Dr. Parthraj Bambhaniya" className="w-full h-full object-cover" />
+          </motion.div>
+        </div>
+
+        {/* Right: research interests + gallery */}
+        <div className="md:col-span-2 text-center md:text-left">
+          <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
+          <p className="text-gray-300 leading-relaxed mb-6">{personalInfo.researchInterests}</p>
+
+          {/* Gallery title (optional) */}
+          <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
+
+          {/* Responsive image grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {researchImages.map((img, i) => (
+              <motion.div
+                key={i}
+                className="relative group overflow-hidden rounded-xl border border-slate-700"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.caption}
+                  className="w-full h-44 md:h-36 lg:h-40 object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-xs md:text-sm text-gray-200 py-2 text-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  {img.caption}
                 </div>
-                <div className="md:col-span-2 text-center md:text-left">
-                    <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
-                    <p className="text-gray-300 leading-relaxed">{personalInfo.researchInterests}</p>
-                </div>
-            </div>
-        </AnimatedSection>
-    );
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </AnimatedSection>
+  );
 };
+
 
 
 const SectionWithMoreButton = ({ id, title, children, onMoreClick }) => {
