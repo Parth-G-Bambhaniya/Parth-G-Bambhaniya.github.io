@@ -403,9 +403,14 @@ const Hero = () => {
 const About = () => {
   // array of images + captions (use the imports above)
   const researchImages = [
-    { src: shadowImage, caption: "Shadow imaging models: Naked Singularities" },
-    { src: wmkeckImage, caption: "S-star orbit astrometry" },
-    { src: orbitImage, caption: "Relativistic orbit simulation in the naked singularity spacetime" }
+  { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
+  { src: shadowImage1, caption: "Simulated Black hole shadow under varying spin and inclination" },
+  { src: shadowImage2, caption: "Comparative shadow structure: Naked singularity vs Black hole" },
+  { src: wmkeckImage, caption: "Astrometric data of S-star orbit from W. M. Keck Observatory" },
+  { src: s2orbitImage, caption: "S2 star relativistic orbit around the Galactic Center" },
+  { src: rvs2Image, caption: "Radial velocity curve of S2 showing gravitational redshift" },
+  { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
+  { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
   ];
 
   return (
