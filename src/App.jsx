@@ -68,7 +68,7 @@ const experienceData = [
 const skillsData = {
   programming: ["C/C++", "Python", "FORTRAN", "Mathematica",],
   computational: [
-    "PLUTO", "Athena++/AthenaK", "PyGRO", "Gammapy", "Brahma", "Einstein toolkit", "ipole"
+    "PLUTO", "Athena++/AthenaK", "PyGRO", "Gammapy", "Brahma"
   ],
   tools: ["LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "Windows"]
 };
