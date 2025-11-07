@@ -679,7 +679,8 @@ const MainPage = ({ setPage }) => {
                 </div>
             </AnimatedSection>
 
-           <SectionWithMoreButton
+          
+     <SectionWithMoreButton
   id="publications"
   title="Selected Publications"
   onMoreClick={() => setPage('publications')}
@@ -695,38 +696,40 @@ const MainPage = ({ setPage }) => {
         transition={{ duration: 0.5, delay: index * 0.1 }}
       >
         <h3 className="font-semibold text-white text-lg">{pub.title}</h3>
-        <p className="text-cyan-400 text-sm">{pub.journal}</p>
-
-        {/* --- Add DOI or arXiv link below --- */}
-        {pub.doi && (
-          <p className="text-sm text-gray-300 mt-1">
-            <a
-              href={`https://doi.org/${pub.doi}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-500 hover:underline"
-            >
-              [DOI]
-            </a>
-          </p>
-        )}
-
-        {pub.journal?.includes("arXiv") && (
-          <p className="text-sm text-gray-300 mt-1">
-            <a
-              href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-500 hover:underline"
-            >
-              [View on arXiv]
-            </a>
-          </p>
-        )}
+        <p className="text-cyan-400 text-sm">
+          {pub.journal}
+          {pub.doi && (
+            <>
+              {" "}
+              <a
+                href={`https://doi.org/${pub.doi}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-500 hover:underline ml-1"
+              >
+                [DOI]
+              </a>
+            </>
+          )}
+          {pub.journal?.includes("arXiv") && (
+            <>
+              {" "}
+              <a
+                href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-500 hover:underline ml-1"
+              >
+                [arXiv]
+              </a>
+            </>
+          )}
+        </p>
       </motion.div>
     ))}
   </div>
 </SectionWithMoreButton>
+
 
 
             <SectionWithMoreButton id="achievements" title="Notable Achievements" onMoreClick={() => setPage('achievements')}>
