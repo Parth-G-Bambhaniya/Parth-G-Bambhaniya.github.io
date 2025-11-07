@@ -8,10 +8,10 @@ import backgroundImage from './assets/background_image.jpg';
 
 const personalInfo = {
   name: "Parth Bambhaniya.",
-  title: "FAPESP Postdoctoral Fellow | Department of Astronomy-IAG, University of São Paulo, Brazil",
+  title: "FAPESP Postdoctoral Fellow | IAG, University of São Paulo, Brazil",
   email: "grcollapse@gmail.com / parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
-  researchInterests: "Astrophysics of Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers.",
+  researchInterests: "Astrophysics of Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
   links: {
     googleScholar: "https://scholar.google.com/citations?user=bfBJi04AAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8424-3357",
