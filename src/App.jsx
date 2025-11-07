@@ -88,7 +88,7 @@ const fullPublicationsList = [
    
     
     // Submitted/arXiv Articles
-    { title: "A Study of Black Holes and Beyond: Shadows and Relativistic Orbits", journal: "arXiv:2406.01202 [gr-qc].", doi:"https://arxiv.org/abs/2406.01202", type: "submitted" },
+    { title: "A Study of Black Holes and Beyond: Shadows and Relativistic Orbits", journal: "arXiv:2406.01202 [gr-qc].", type: "submitted" },
     { title: "Timelike Geodesics in Naked Singularity and Black Hole Spacetimes II", journal: "arXiv:1909.08873 [gr-qc].", type: "submitted" },
     { title: "Probing the Shadow Image of the Sagittarius A* with Event Horizon Telescope", journal: "arXiv:2202.00588 [gr-qc].", type: "submitted" },
     { title: "Quasinormal Modes and Stability Analysis of the JMN-1 Naked Singularity", journal: "arXiv: 2504.01653 [gr-qc].", type: "submitted" }
@@ -703,7 +703,7 @@ const MainPage = ({ setPage }) => {
               href={`https://doi.org/${pub.doi}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-red-500 hover:underline ml-2"
+              className="text-red-400 hover:text-red-500 hover:underline ml-2"
             >
               [DOI]
             </a>
@@ -713,7 +713,7 @@ const MainPage = ({ setPage }) => {
               href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-red-500 hover:underline ml-2"
+              className="text-red-400 hover:text-red-500 hover:underline ml-2"
             >
               [arXiv]
             </a>
