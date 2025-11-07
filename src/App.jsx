@@ -23,6 +23,7 @@ const experienceData = [
   {
     duration: "2024-Present",
     role: "FAPESP Postdoctoral Fellow",
+    Mentor: "Elisabete M. de Gouveia Dal Pino",
     institution: "Department of Astronomy-IAG, University of São Paulo, Brazil",
     description: "Project: High Energy Processes around Black Holes and Jets."
   },
@@ -35,6 +36,7 @@ const experienceData = [
   {
     duration: "2018-2023",
     role: "Ph.D. in Physics (Astrophysics)",
+    supervisor: "Pankaj S. Joshi",
     institution: "Charotar University of Science and Technology, India",
     description: "Thesis: A Study of Black Holes and Beyond: Shadows and Relativistic Orbits."
   },
