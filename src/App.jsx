@@ -63,7 +63,7 @@ const skillsData = {
 
 const fullPublicationsList = [
     // Published Articles
-    { title: "Horizon-scale tests of gravity theories and fundamental physics from the Event Horizon Telescope image of Sagittarius A*", journal: "Class. Quant. Grav. 40, 2023, 165007.", type: "published" },
+    { title: "Horizon-scale tests of gravity theories and fundamental physics from the Event Horizon Telescope image of Sagittarius A*", journal: "Class. Quant. Grav. 40, 2023, 165007.", doi:"https://doi.org/10.1088/1361-6382/acd97b", type: "published" },
     { title: "Imaging ultra-compact objects with radiative inefficient accretion flows", journal: "Astronomy and Astrophysics 682, 2024, A113.", type: "published" },
     { title: "Shadows and negative precession in non-Kerr spacetime", journal: "Phys. Rev. D 103, 2021, 084005.", type: "published" },
     { title: "Relativistic orbits of S2 star in the presence of scalar field", journal: "Eur. Phys. J. C, 84, 2024, 124.", type: "published" },  
