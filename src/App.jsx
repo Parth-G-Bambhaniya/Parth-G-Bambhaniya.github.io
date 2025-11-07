@@ -377,7 +377,7 @@ const Hero = () => {
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
                         <div className="flex justify-center space-x-6 mb-8 text-3xl">
                             <a href={personalInfo.links.orcid} target="_blank" rel="noopener noreferrer" className="text-green-300 hover:text-cyan-400 transition-colors" title="ORCID"><i className="ai ai-orcid"></i></a>
-                            <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="Google Scholar"><i className="ai ai-google-scholar"></i></a>
+                            <a href={personalInfo.links.googleScholar} target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-cyan-400 transition-colors" title="Google Scholar"><i className="ai ai-google-scholar"></i></a>
                             <a href={personalInfo.links.inspireHEP} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors" title="INSPIRE-HEP"><i className="ai ai-inspire"></i></a>
                         </div>
                         <a href="#contact" className="bg-cyan-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">Get in Touch</a>
