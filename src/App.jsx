@@ -9,7 +9,7 @@ import backgroundImage from './assets/background_image.jpg';
 const personalInfo = {
   name: "Parth Bambhaniya",
   title: "PhD | FAPESP Postdoctoral Fellow | IAG, University of São Paulo, Brazil",
-  quote: ""Every photon that escapes carries the truth of gravity"",
+  quote: "Every photon that escapes carries the truth of gravity",
   email: "parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
   researchInterests: "Astrophysics of Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
