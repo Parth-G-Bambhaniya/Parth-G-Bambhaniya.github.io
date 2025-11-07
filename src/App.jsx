@@ -425,26 +425,27 @@ const About = () => {
           <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
 
           {/* Responsive image grid */}
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {researchImages.map((img, index) => (
     <motion.div
       key={index}
-      className="relative group overflow-hidden rounded-2xl shadow-xl border border-slate-700/60"
-      whileHover={{ scale: 1.04 }}
-      transition={{ duration: 0.3 }}
+      className="relative group flex justify-center items-center overflow-hidden rounded-xl border border-slate-700/60 bg-slate-950"
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.25 }}
     >
       <img
         src={img.src}
         alt={img.caption}
-        className="w-full h-64 md:h-72 lg:h-80 object-contain bg-slate-950"
+        className="max-w-full max-h-[450px] object-scale-down rounded-xl"
         loading="lazy"
       />
-      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-sm text-gray-200 py-2 text-center opacity-0 group-hover:opacity-100 transition">
+      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-xs md:text-sm text-gray-200 py-2 text-center opacity-0 group-hover:opacity-100 transition-opacity">
         {img.caption}
       </div>
     </motion.div>
   ))}
 </div>
+
         </div>
       </div>
     </AnimatedSection>
