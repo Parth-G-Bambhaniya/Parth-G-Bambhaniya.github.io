@@ -404,12 +404,12 @@ const About = () => {
   // array of images + captions (use the imports above)
   const researchImages = [
   { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
-  { src: shadowImage1, caption: "Simulated Black hole shadow under varying spin and inclination" },
+  { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
   { src: shadowImage2, caption: "Comparative shadow structure: Naked singularity vs Black hole" },
-  { src: wmkeckImage, caption: "Astrometric data of S-star orbit from W. M. Keck Observatory" },
-  { src: s2orbitImage, caption: "S2 star relativistic orbit around the Galactic Center" },
-  { src: rvs2Image, caption: "Radial velocity curve of S2 showing gravitational redshift" },
+  { src: wmkeckImage, caption: "Astrometric data of S-star orbits" },
   { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
+  { src: s2orbitImage, caption: "S2 star orbit around the Sgr A*" },
+  { src: rvs2Image, caption: "Radial velocity curve of S2 star showing gravitational redshift" },
   { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
   ];
 
@@ -436,28 +436,22 @@ const About = () => {
           <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
 
           {/* Responsive image grid */}
-   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
   {researchImages.map((img, index) => (
-    <motion.div
-      key={index}
-      className="relative group flex justify-center items-center overflow-hidden rounded-xl border border-slate-700/60 bg-slate-950"
-      whileHover={{ scale: 1.03 }}
-      transition={{ duration: 0.25 }}
+    <div 
+      key={index} 
+      className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300"
     >
-      <img
-        src={img.src}
-        alt={img.caption}
-        className="max-w-full max-h-[450px] object-scale-down rounded-xl"
-        loading="lazy"
+      <img 
+        src={img.src} 
+        alt={img.caption} 
+        className="w-full h-auto object-contain"
       />
-      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-xs md:text-sm text-gray-200 py-2 text-center opacity-0 group-hover:opacity-100 transition-opacity">
-        {img.caption}
-      </div>
-    </motion.div>
+      <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-2">{img.caption}</p>
+    </div>
   ))}
 </div>
-
-        </div>
+      </div>
       </div>
     </AnimatedSection>
   );
