@@ -403,15 +403,15 @@ const Hero = () => {
 
 const About = () => {
   const researchImages = [
-    { src: shadowImage2, caption: "Comparative shadow structure: Naked singularity vs Black hole" },
-    { src: wmkeckImage, caption: "Astrometric data of S-star orbits" },
-    { src: s2orbitImage, caption: "S2 star orbit around the Sgr A*" },
-    { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
+    { src: shadowImage2, caption: "Comparative shadow images: Naked singularity vs Black hole" },
+    { src: wmkeckImage, caption: "Astrometric data of relativistic orbits of S-stars" },
+    { src: s2orbitImage, caption: "Naked singularity model fitting with S2 star data" },
+    { src: pulsarImage, caption: "Time delay of pulsar signals probes the causal structure of galactic center" },
     { src: shadowImage1, caption: "Simulated thin accretion disks of singular vs regular Black Holes"},
     { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole"},
-    { src: jmnorbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
-    { src: collapseImage, caption: "Inhomogeneous dust gravitationl collapse"},
-    { src: ehtImage, caption: "Observed shadow of Sgr A* by EHT collaboration, Credit: ESO/José Francisco Salgado"},
+    { src: jmnorbitImage, caption: "Relativistic orbit simulation in rotating naked singularity spacetime" },
+    { src: collapseImage, caption: "Gravitationl collapse of inhomogeneous dust"},
+    { src: ehtImage, caption: "Observed shadow image of Sgr A* at the Milky way galactic center by EHT collaboration, Credit: ESO/José Francisco Salgado"},
     
   ];
 
