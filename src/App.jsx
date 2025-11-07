@@ -29,7 +29,7 @@ const experienceData = [
   },
   {
     duration: "2023-2024",
-    role: "Research Associate",
+    role: "Postdoctoral Fellow",
     institution: "ICSC, Ahmedabad University, India",
     description: "Project: Astrophysics of Black Holes and Spacetime Singularities."
   },
