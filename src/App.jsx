@@ -730,7 +730,7 @@ const MainPage = ({ setPage }) => {
             <AnimatedSection id="contact" className="bg-slate-800/50 backdrop-blur-sm">
                 <div className="container mx-auto text-center">
                     <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
-                    <p className="text-gray-400 mb-8 max-w-2xl mx-auto">I am always open to discussing new research, collaborations, or opportunities. Feel free to reach out to me via email.</p>
+                    <p className="text-gray-400 mb-8 max-w-2xl mx-auto">Open to discussions on research, collaborations, and academic opportunities. Contact via email is warmly welcome.</p>
                     <motion.a href={`mailto:${personalInfo.email}`} className="inline-flex items-center bg-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <i className="fa-solid fa-envelope mr-3"></i> {personalInfo.email}
                     </motion.a>
