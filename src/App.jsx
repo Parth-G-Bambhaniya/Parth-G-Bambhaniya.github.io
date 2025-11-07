@@ -680,7 +680,7 @@ const MainPage = ({ setPage }) => {
             </AnimatedSection>
 
           
-     <SectionWithMoreButton
+<SectionWithMoreButton
   id="publications"
   title="Selected Publications"
   onMoreClick={() => setPage('publications')}
@@ -695,40 +695,35 @@ const MainPage = ({ setPage }) => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
       >
-        <h3 className="font-semibold text-white text-lg">{pub.title}</h3>
-        <p className="text-cyan-400 text-sm">
+        <h3 className="font-semibold text-white text-lg mb-1">{pub.title}</h3>
+        <p className="text-cyan-400 text-sm inline">
           {pub.journal}
           {pub.doi && (
-            <>
-              {" "}
-              <a
-                href={`https://doi.org/${pub.doi}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-500 hover:underline ml-1"
-              >
-                [DOI]
-              </a>
-            </>
+            <a
+              href={`https://doi.org/${pub.doi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-500 hover:underline ml-2"
+            >
+              [DOI]
+            </a>
           )}
           {pub.journal?.includes("arXiv") && (
-            <>
-              {" "}
-              <a
-                href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-500 hover:underline ml-1"
-              >
-                [arXiv]
-              </a>
-            </>
+            <a
+              href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-500 hover:underline ml-2"
+            >
+              [arXiv]
+            </a>
           )}
         </p>
       </motion.div>
     ))}
   </div>
 </SectionWithMoreButton>
+
 
 
 
