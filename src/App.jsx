@@ -57,7 +57,7 @@ const skillsData = {
   computational: [
     "PLUTO (MHD)", "Athena++/AthenaK (GRMHD)", "PyGRO (Orbits)", "Gammapy (GRBs and CRs)", "Brahma code (Ray-tracing)", "Einstein toolkit (GWs)", "ipole (Polarization)"
   ],
-  tools: ["LaTeX", "ParaView", "VisIt", "Linux", "Mac", "Windows", "MS Office"]
+  tools: ["LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "Windows"]
 };
 
 const fullPublicationsList = [
