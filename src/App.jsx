@@ -453,7 +453,7 @@ const About = () => {
                     className="w-auto h-auto max-h-[260px] object-contain"
                   />
                 </div>
-                <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-3">
+                <p className="text-sm text-center text-white-300 mt-2 mb-3 px-3">
                   {img.caption}
                 </p>
               </div>
