@@ -679,16 +679,55 @@ const MainPage = ({ setPage }) => {
                 </div>
             </AnimatedSection>
 
-            <SectionWithMoreButton id="publications" title="Selected Publications" onMoreClick={() => setPage('publications')}>
-                 <div className="space-y-6">
-                    {publicationsPreview.map((pub, index) => (
-                        <motion.div key={index} className="bg-slate-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-cyan-500/20" initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
-                            <h3 className="font-semibold text-white text-lg">{pub.title}</h3>
-                            <p className="text-cyan-400 text-sm">{pub.journal}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </SectionWithMoreButton>
+           <SectionWithMoreButton
+  id="publications"
+  title="Selected Publications"
+  onMoreClick={() => setPage('publications')}
+>
+  <div className="space-y-6">
+    {publicationsPreview.map((pub, index) => (
+      <motion.div
+        key={index}
+        className="bg-slate-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-cyan-500/20"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        <h3 className="font-semibold text-white text-lg">{pub.title}</h3>
+        <p className="text-cyan-400 text-sm">{pub.journal}</p>
+
+        {/* --- Add DOI or arXiv link below --- */}
+        {pub.doi && (
+          <p className="text-sm text-gray-300 mt-1">
+            <a
+              href={`https://doi.org/${pub.doi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-500 hover:underline"
+            >
+              [DOI]
+            </a>
+          </p>
+        )}
+
+        {pub.journal?.includes("arXiv") && (
+          <p className="text-sm text-gray-300 mt-1">
+            <a
+              href={`https://arxiv.org/abs/${pub.journal.match(/\d{4}\.\d{5}/)?.[0] || ""}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-500 hover:underline"
+            >
+              [View on arXiv]
+            </a>
+          </p>
+        )}
+      </motion.div>
+    ))}
+  </div>
+</SectionWithMoreButton>
+
 
             <SectionWithMoreButton id="achievements" title="Notable Achievements" onMoreClick={() => setPage('achievements')}>
                  <div className="grid md:grid-cols-2 gap-6">
