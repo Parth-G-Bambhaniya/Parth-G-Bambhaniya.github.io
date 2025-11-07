@@ -19,7 +19,7 @@ import collapseImage from './assets/collapse.png';
 
 const personalInfo = {
   name: "Parth Bambhaniya",
-  title: "PhD | FAPESP Postdoctoral Fellow | IAG, University of São Paulo, Brazil",
+  title: "Ph.D. | FAPESP Postdoctoral Fellow | IAG, University of São Paulo, Brazil",
   quote: "Every photon that escapes carries the truth of gravity",
   email: "parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
@@ -406,7 +406,7 @@ const About = () => {
     { src: wmkeckImage, caption: "Astrometric data of S-star orbits" },
     { src: s2orbitImage, caption: "S2 star orbit around the Sgr A*" },
     { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
-    { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes"},
+    { src: shadowImage1, caption: "Simulated thin accretion disks of singular vs regular Black Holes"},
     { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole"},
     { src: jmnorbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
     { src: collapseImage, caption: "Inhomogeneous dust gravitationl collapse"},
