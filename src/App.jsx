@@ -425,25 +425,26 @@ const About = () => {
           <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
 
           {/* Responsive image grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {researchImages.map((img, i) => (
-              <motion.div
-                key={i}
-                className="relative group overflow-hidden rounded-xl border border-slate-700"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <img
-                  src={img.src}
-                  alt={img.caption}
-                  className="w-full h-44 md:h-36 lg:h-40 object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-xs md:text-sm text-gray-200 py-2 text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  {img.caption}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {researchImages.map((img, index) => (
+    <motion.div
+      key={index}
+      className="relative group overflow-hidden rounded-2xl shadow-xl border border-slate-700/60"
+      whileHover={{ scale: 1.04 }}
+      transition={{ duration: 0.3 }}
+    >
+      <img
+        src={img.src}
+        alt={img.caption}
+        className="w-full h-64 md:h-72 lg:h-80 object-contain bg-slate-950"
+        loading="lazy"
+      />
+      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-sm text-gray-200 py-2 text-center opacity-0 group-hover:opacity-100 transition">
+        {img.caption}
+      </div>
+    </motion.div>
+  ))}
+</div>
         </div>
       </div>
     </AnimatedSection>
