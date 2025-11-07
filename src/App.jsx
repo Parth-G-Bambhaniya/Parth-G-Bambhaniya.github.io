@@ -434,38 +434,38 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Right: research interests + gallery */}
-        <div className="md:col-span-2 text-center md:text-left">
-          <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
-          <p className="text-gray-300 leading-relaxed mb-6">
-            {personalInfo.researchInterests}
-          </p>
+       {/* Right: research interests + gallery */}
+<div className="md:col-span-2 text-center md:text-left">
+  <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
+  <p className="text-gray-300 leading-relaxed mb-6">
+    {personalInfo.researchInterests}
+  </p>
 
-          <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
+  <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
 
-          {/* Responsive image grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {researchImages.map((img, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300 flex flex-col items-center"
-              >
-                <div className="w-full flex justify-center bg-black">
-                  <img
-                    src={img.src}
-                    alt={img.caption}
-                    className="w-auto h-auto max-h-[260px] object-contain"
-                  />
-                </div>
-                <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-3">
-                  {img.caption}
-                </p>
-              </div>
-            ))}
+  {/* Responsive image grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {researchImages.map((img, index) => (
+      <div
+        key={index}
+        className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300 flex flex-col items-center"
+      >
+        <div className="w-full flex justify-center bg-black">
+          <img
+            src={img.src}
+            alt={img.caption}
+            className="w-auto h-auto max-h-[260px] object-contain"
+          />
+        </div>
+        <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-3">
+          {img.caption}
+        </p>
       </div>
-    </AnimatedSection>
-  );
-};
+    ))}
+  </div> {/* closes grid container */}
+</div> {/* closes md:col-span-2 section */}
+</AnimatedSection>
+
 
 
 
