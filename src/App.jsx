@@ -402,69 +402,67 @@ const Hero = () => {
 
 
 const About = () => {
-  // array of images + captions
   const researchImages = [
-    { src: shadowImage2, caption: "Comparative shadow structure: Naked singularity vs. black hole" },
-    { src: wmkeckImage, caption: "Astrometric data of S-star orbits (WM Keck Observatory)" },
-    { src: s2orbitImage, caption: "S2 star orbit around Sagittarius A*" },
-    { src: pulsarImage, caption: "Pulsar timing as a probe of spacetime curvature near compact objects" },
+    { src: shadowImage2, caption: "Comparative shadow structure: Naked singularity vs Black hole" },
+    { src: wmkeckImage, caption: "Astrometric data of S-star orbits" },
+    { src: s2orbitImage, caption: "S2 star orbit around the Sgr A*" },
+    { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
     { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
-    { src: shadowImage1, caption: "Simulated thin accretion disks of black holes" },
+    { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
     { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
-    { src: rvs2Image, caption: "Radial velocity curve of S2 star showing gravitational redshift" },
-    { src: deformImage, caption: "Deformed shadow shape in non-Kerr spacetime" },
+    { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole" },
     { src: penroseImage, caption: "Penrose diagram for null naked singularity" },
   ];
 
   return (
     <AnimatedSection id="about" className="bg-slate-900/60 backdrop-blur-sm relative">
       <div className="container mx-auto grid md:grid-cols-3 gap-12 items-start">
+        
         {/* Left: profile image */}
-        <div className="md:col-span-1 flex justify-center">
+        <div className="md:col-span-1">
           <motion.div
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-slate-700 overflow-hidden shadow-2xl"
+            className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-slate-700 overflow-hidden shadow-2xl"
             whileHover={{ scale: 1.05, rotate: 3 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <img
-              src={profileImage}
-              alt="Dr. Parthraj Bambhaniya"
-              className="w-full h-full object-cover"
-            />
+            <img src={profileImage} alt="Dr. Parthraj Bambhaniya" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 
-       {/* Right: research interests + gallery */}
-<div className="md:col-span-2 text-center md:text-left">
-  <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
-  <p className="text-gray-300 leading-relaxed mb-6">
-    {personalInfo.researchInterests}
-  </p>
+        {/* Right: research interests + gallery */}
+        <div className="md:col-span-2 text-center md:text-left">
+          <h2 className="text-3xl font-bold text-white mb-4">Research Interests</h2>
+          <p className="text-gray-300 leading-relaxed mb-6">
+            {personalInfo.researchInterests}
+          </p>
 
-  <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">Selected Research Visuals</h3>
 
-  {/* Responsive image grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {researchImages.map((img, index) => (
-      <div
-        key={index}
-        className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300 flex flex-col items-center"
-      >
-        <div className="w-full flex justify-center bg-black">
-          <img
-            src={img.src}
-            alt={img.caption}
-            className="w-auto h-auto max-h-[260px] object-contain"
-          />
-        </div>
-        <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-3">
-          {img.caption}
-        </p>
-      </div>
-    ))}
-  </div> {/* closes grid container */}
-</div> {/* closes md:col-span-2 section */}
-</AnimatedSection>
+          {/* Responsive image grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {researchImages.map((img, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300 flex flex-col items-center"
+              >
+                <div className="w-full flex justify-center bg-black">
+                  <img
+                    src={img.src}
+                    alt={img.caption}
+                    className="w-auto h-auto max-h-[260px] object-contain"
+                  />
+                </div>
+                <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-3">
+                  {img.caption}
+                </p>
+              </div>
+            ))}
+          </div> {/* closes grid container */}
+        </div> {/* closes right section */}
+      </div> {/* closes main container */}
+    </AnimatedSection>
+  );
+};
 
 
 
