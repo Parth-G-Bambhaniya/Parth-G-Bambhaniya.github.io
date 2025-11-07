@@ -55,11 +55,11 @@ const experienceData = [
 ];
 
 const skillsData = {
-  programming: ["C/C++", "Python", "FORTRAN"],
+  programming: ["C/C++", "Python", "FORTRAN", "Mathematica",],
   computational: [
     "PLUTO (MHD)", "Athena++/AthenaK (GRMHD)", "PyGRO (Orbits)", "Gammapy (GRBs and CRs)", "Brahma code (Ray-tracing)", "Einstein toolkit (GWs)", "ipole (Polarization)"
   ],
-  tools: ["Mathematica", "LaTeX", "ParaView", "VisIt", "Linux", "Mac", "Windows", "MS Office"]
+  tools: ["LaTeX", "ParaView", "VisIt", "Linux", "Mac", "Windows", "MS Office"]
 };
 
 const fullPublicationsList = [
