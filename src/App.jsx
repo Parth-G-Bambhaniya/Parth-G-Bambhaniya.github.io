@@ -452,7 +452,7 @@ const About = () => {
           className="max-h-full max-w-full object-contain"
         />
       </div>
-      <p className="text-sm text-center text-white-300 mt-3 mb-3 px-3">{img.caption}</p>
+      <p className="text-sm text-center text-cyan-300 mt-3 mb-3 px-3">{img.caption}</p>
     </div>
   ))}
 </div>
