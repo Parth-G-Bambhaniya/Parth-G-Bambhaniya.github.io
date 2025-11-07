@@ -9,8 +9,9 @@ import shadowImage2 from './assets/Shadowmodel2.png';
 import wmkeckImage from './assets/WMKeckorbit.png';
 import orbitImage from './assets/JNWorbit1.png';
 import s2orbitImage from './assets/S2orbit.png';
-import rvs2Image from './assets/RVS2.png';
+import deformImage from './assets/Deform.png';
 import pulsarImage from './assets/Pulsartiming.png';
+import penroseImage from './assets/nullpenrose.png';
 
 
 
@@ -411,6 +412,8 @@ const About = () => {
   { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
   { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },  
   { src: rvs2Image, caption: "Radial velocity curve of S2 star showing gravitational redshift" },
+  { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole" },  
+  { src: penroseImage, caption: "Penrose diagram for null naked singularity" },
   ];
 
   return (
@@ -440,17 +443,20 @@ const About = () => {
   {researchImages.map((img, index) => (
     <div 
       key={index} 
-      className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300"
+      className="bg-slate-800/70 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 transition duration-300 flex flex-col items-center"
     >
-      <img 
-        src={img.src} 
-        alt={img.caption} 
-        className="w-full h-auto object-contain"
-      />
-      <p className="text-sm text-center text-cyan-300 mt-2 mb-3 px-2">{img.caption}</p>
+      <div className="w-full h-64 flex items-center justify-center bg-black">
+        <img 
+          src={img.src} 
+          alt={img.caption} 
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
+      <p className="text-sm text-center text-white-300 mt-3 mb-3 px-3">{img.caption}</p>
     </div>
   ))}
 </div>
+
       </div>
       </div>
     </AnimatedSection>
