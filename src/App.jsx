@@ -406,11 +406,11 @@ const About = () => {
   { src: shadowImage2, caption: "Comparative shadow structure: Naked singularity vs Black hole" },
   { src: wmkeckImage, caption: "Astrometric data of S-star orbits" },
   { src: s2orbitImage, caption: "S2 star orbit around the Sgr A*" },
-  { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },  
-  { src: rvs2Image, caption: "Radial velocity curve of S2 star showing gravitational redshift" },
   { src: pulsarImage, caption: "Pulsar timing probes of spacetime curvature near compact objects" },
   { src: shadowImage, caption: "Shadow imaging model of horizonless compact objects" },
   { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
+  { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },  
+  { src: rvs2Image, caption: "Radial velocity curve of S2 star showing gravitational redshift" },
   ];
 
   return (
