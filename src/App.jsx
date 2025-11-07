@@ -11,7 +11,7 @@ import orbitImage from './assets/JNWorbit1.png';
 import s2orbitImage from './assets/S2orbit.png';
 import pulsarImage from './assets/Pulsartiming.png';
 import deformImage from './assets/Deform.png';
-
+import jmnorbitImage from './assets/orbitjmn.png';
 
 
 
@@ -411,6 +411,7 @@ const About = () => {
     { src: shadowImage1, caption: "Simulated thin accretion disks of Black Holes" },
     { src: orbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
     { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole" },
+    { src: jmnorbitImage, caption: "Relativistic orbits in non-vacuum, horizonless spacetime" },
     
   ];
 
