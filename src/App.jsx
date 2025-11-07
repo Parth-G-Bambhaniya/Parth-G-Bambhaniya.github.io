@@ -457,6 +457,7 @@ const About = () => {
   ))}
 </div>
 
+
       </div>
       </div>
     </AnimatedSection>
