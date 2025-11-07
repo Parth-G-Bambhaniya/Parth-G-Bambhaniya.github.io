@@ -5,7 +5,7 @@ import profileImage from './assets/Profile_Picture.jpg';
 import backgroundImage from './assets/background_image.jpg';
 import shadowImage1 from './assets/Shadowmodel1.png';
 import shadowImage2 from './assets/Shadowmodel2.png';
-import wmkeckImage from './assets/WMKeckorbit.png';
+import wmkeckImage from './assets/WMKeckorbit1.png';
 import s2orbitImage from './assets/S2orbit.png';
 import pulsarImage from './assets/Pulsartiming.png';
 import deformImage from './assets/Deform.png';
