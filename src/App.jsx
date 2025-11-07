@@ -11,6 +11,7 @@ import pulsarImage from './assets/Pulsartiming.png';
 import deformImage from './assets/Deform.png';
 import jmnorbitImage from './assets/orbitjmn.png';
 import collapseImage from './assets/collapse.png';
+import ehtImage from './assets/EHT.jpg';
 
 
 
@@ -410,6 +411,7 @@ const About = () => {
     { src: deformImage, caption: "Deformed shadow shape of non-Kerr black hole"},
     { src: jmnorbitImage, caption: "Relativistic orbit simulation in naked singularity spacetime" },
     { src: collapseImage, caption: "Inhomogeneous dust gravitationl collapse"},
+    { src: ehtImage, caption: "Observed shadow of Sgr A* by EHT collaboration, Credit: ESO/José Francisco Salgado"},
     
   ];
 
