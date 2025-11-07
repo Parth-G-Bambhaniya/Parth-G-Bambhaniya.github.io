@@ -12,7 +12,7 @@ const personalInfo = {
   quote: "Every photon that escapes carries the truth of gravity",
   email: "parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
-  researchInterests: "Astrophysics of Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
+  researchInterests: "Theoretical and Computational Astrophysics, Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
   links: {
     googleScholar: "https://scholar.google.com/citations?user=bfBJi04AAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8424-3357",
@@ -30,7 +30,7 @@ const experienceData = [
   {
     duration: "2023-2024",
     role: "Postdoctoral Fellow",
-    institution: "ICSC, Ahmedabad University, India",
+    institution: "ICSC, Ahmedabad University, India, (Mentor: Pankaj S. Joshi)",
     description: "Project: Astrophysics of Black Holes and Spacetime Singularities."
   },
   {
@@ -56,32 +56,32 @@ const experienceData = [
 const skillsData = {
   programming: ["C/C++", "Python", "FORTRAN", "Mathematica",],
   computational: [
-    "PLUTO (MHD)", "Athena++/AthenaK (GRMHD)", "PyGRO (Orbits)", "Gammapy (GRBs and CRs)", "Brahma code (Ray-tracing)", "Einstein toolkit (GWs)", "ipole (Polarization)"
+    "PLUTO", "Athena++/AthenaK", "PyGRO", "Gammapy", "Brahma", "Einstein toolkit", "ipole"
   ],
   tools: ["LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "Windows"]
 };
 
 const fullPublicationsList = [
     // Published Articles
-    { title: "Shadows and negative precession in non-Kerr spacetime", journal: "Phys. Rev. D 103, 2021, 084005.", type: "published" },
-    { title: "Precession of timelike bound orbits in Kerr spacetime", journal: "Eur. Phys. J. C 81, 2021, 205.", type: "published" },
-    { title: "Imaging ultra-compact objects with radiative inefficient accretion flows", journal: "Astronomy and Astrophysics 682, 2024, A113.", type: "published" },
-    { title: "Thin accretion disk in the Simpson-Visser black-bounce and wormhole spacetime", journal: "Phys. Rev. D 105, 2022, 023021.", type: "published" },
-    { title: "Relativistic orbits of S2 star in the presence of scalar field", journal: "Eur. Phys. J. C, 84, 2024, 124.", type: "published" },
-    { title: "Timelike geodesics in Naked Singularity and Black Hole Spacetimes", journal: "Phys. Rev. D 100, 2019, 124020.", type: "published" },
     { title: "Horizon-scale tests of gravity theories and fundamental physics from the Event Horizon Telescope image of Sagittarius A*", journal: "Class. Quant. Grav. 40, 2023, 165007.", type: "published" },
+    { title: "Imaging ultra-compact objects with radiative inefficient accretion flows", journal: "Astronomy and Astrophysics 682, 2024, A113.", type: "published" },
+    { title: "Shadows and negative precession in non-Kerr spacetime", journal: "Phys. Rev. D 103, 2021, 084005.", type: "published" },
+    { title: "Relativistic orbits of S2 star in the presence of scalar field", journal: "Eur. Phys. J. C, 84, 2024, 124.", type: "published" },  
+    { title: "Thin accretion disk in the Simpson-Visser black-bounce and wormhole spacetime", journal: "Phys. Rev. D 105, 2022, 023021.", type: "published" },
+    { title: "Shadow of a Naked Singularity without Photon Sphere", journal: "Phys. Rev. D 102, 2020, 024022.", type: "published" },  
+    { title: "Energy extraction from Janis-Newman-Winicour naked singularity", journal: "Phys. Rev. D 107, 2023, 064036.", type: "published" }, 
+    { title: "Relativistic time delay analysis of pulsar signals near ultra-compact objects", journal: "Phys. Rev. D 110, 2024, 104026.", type: "published" },  
+    { title: "Timelike geodesics in Naked Singularity and Black Hole Spacetimes", journal: "Phys. Rev. D 100, 2019, 124020.", type: "published" },  
+    { title: "Precession of timelike bound orbits in Kerr spacetime", journal: "Eur. Phys. J. C 81, 2021, 205.", type: "published" },
+    { title: "Time Delay of Pulsar Signals in Astrophysical Black Hole Spacetimes", journal: "Phys. Dark. Univ. 49, 2025, 10203649.", type: "published" }, 
     { title: "High Energy Particle Collisions in the vicinity of Naked Singularity", journal: "Phys. Dark. Univ. 50, 2025, 102101.", type: "published" },
-    { title: "Shadow of a Naked Singularity without Photon Sphere", journal: "Phys. Rev. D 102, 2020, 024022.", type: "published" },    
     { title: "Shadows and precession of orbits in rotating Janis-Newman-Winicour spacetime", journal: "Eur. Phys. J. C 82, 2022, 77.", type: "published" },
     { title: "Rotational energy extraction from the Kerr black hole's mimickers", journal: "Universe 8. 2022, 571.", type: "published" },
-    { title: "Energy extraction from Janis-Newman-Winicour naked singularity", journal: "Phys. Rev. D 107, 2023, 064036.", type: "published" },
-    { title: "Time Delay of Pulsar Signals in Astrophysical Black Hole Spacetimes", journal: "Phys. Dark. Univ. 49, 2025, 10203649.", type: "published" },
     { title: "Lense-Thirring effect and precession of timelike geodesics in slowly rotating black hole and naked singularity spacetimes", journal: "Phys. Dark. Univ. 40, 2023, 101215.", type: "published" },  
     { title: "Tidal forces in the Simpson-Visser black-bounce and wormhole spacetimes", journal: "Phys. Dark. Univ. 44, 2024, 101487.", type: "published" },
     { title: "Tidal force effects and periodic orbits in null naked singularity spacetime", journal: "Chin. Phys. C 48, 2024, 11, 115108.", type: "published" },
     { title: "On the interactions of black holes and cosmic strings", journal: "Phys. Dark. Univ. 46, 2024, 101553.", type: "published" },
-    { title: "Towards an Observational test of Black Hole versus Naked Singularity at the Galactic Center", journal: "Int. J. Mod. Phys. D. 28, 2019, 1930024.", type: "published" },
-    { title: "Relativistic time delay analysis of pulsar signals near ultra-compact objects", journal: "Phys. Rev. D 110, 2024, 104026.", type: "published" },
+    { title: "Towards an Observational test of Black Hole versus Naked Singularity at the Galactic Center", journal: "Int. J. Mod. Phys. D. 28, 2019, 1930024.", type: "published" }, 
     { title: "Influence of primary hair and plasma on intensity distribution of black hole shadows", journal: "Eur. Phys. J. Plus 140, 2025, 23", type: "published" },
     { title: "Retrograde Precession of Relativistic Orbits and the Quest for Charged Black Holes", journal: "Phys. Dark. Univ. 48, 2025, 101949.", type: "published" }, 
     { title: "Shadow Formation Conditions Beyond the Kerr Black Hole Paradigm", journal: "Symmetry 17, 2025, 1384.", type: "published" },
@@ -93,7 +93,7 @@ const fullPublicationsList = [
     { title: "Probing the Shadow Image of the Sagittarius A* with Event Horizon Telescope", journal: "arXiv:2202.00588 [gr-qc].", type: "submitted" },
     { title: "Quasinormal Modes and Stability Analysis of the JMN-1 Naked Singularity", journal: "arXiv: 2504.01653 [gr-qc].", type: "submitted" }
 ];
-const publicationsPreview = fullPublicationsList.filter(pub => pub.type === "published").slice(0, 21);
+const publicationsPreview = fullPublicationsList.filter(pub => pub.type === "published").slice(0, 9);
 
 const achievementsData = [
   "FAPESP Postdoctoral Fellowship, Grant No. 2024/09383-4, IAG, Sao Paulo University, Brazil, 2024.",
