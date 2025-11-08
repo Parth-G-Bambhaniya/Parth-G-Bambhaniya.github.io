@@ -20,8 +20,8 @@ import ehtImage from './assets/EHT.jpg';
 
 const personalInfo = {
   name: "Parth Bambhaniya",
-  title: "Ph.D. | FAPESP Postdoctoral Fellow | IAG, University of São Paulo, Brazil",
-  quote: "Every photon that escapes carries the truth of gravity",
+  title: "Ph.D. | FAPESP Postdoctoral Fellow | Department of Astronomy-IAG, University of São Paulo, Brazil",
+  quote: "Every photon that escapes carries the truth of our Universe",
   email: "parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
   researchInterests: "Theoretical and Computational Astrophysics, Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
@@ -70,7 +70,7 @@ const skillsData = {
   computational: [
     "PLUTO", "Athena++/AthenaK", "PyGRO", "Gammapy", "Brahma"
   ],
-  tools: ["LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "Windows"]
+  tools: ["LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "Microsoft"]
 };
 
 const fullPublicationsList = [
@@ -108,12 +108,13 @@ const fullPublicationsList = [
 const publicationsPreview = fullPublicationsList.filter(pub => pub.type === "published").slice(0, 9);
 
 const achievementsData = [
-  "FAPESP Postdoctoral Fellowship, Grant No. 2024/09383-4, IAG, Sao Paulo University, Brazil, 2024.",
+  "FAPESP Postdoctoral Fellowship Award, IAG, Sao Paulo University, Brazil, 2024.",
   "All India Rank-107 in the National level Joint Entrance Screening Test (JEST) for Physics, 2018.",
   "Young Researcher Award by National Institute of Scholars, Bangalore, 2020.",
   "1st rank in the State level Minaxi-Lalit Science Award Test (M.Sc. Physics), 2018.",
   "The CHARUSAT Research paper Award for 'Precession of timelike bound orbits in Kerr spacetime', 2023.",
   "The CHARUSAT Research paper Award for 'Timelike bound orbits in the black hole and naked singularity spacetimes', 2022.", 
+  "CHARUSAT Ph.D. Fellowship Award, Charusat University, India, 2018.",
   "1st rank in the State level Minaxi-Lalit Science Award Test (M.Sc. Physics), 2017.",
   "1st rank in the State level Minaxi-Lalit Science Award Test (B.Sc. Physics), 2016."
 ];
