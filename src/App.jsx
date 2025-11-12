@@ -66,11 +66,11 @@ const experienceData = [
 ];
 
 const skillsData = {
-  programming: ["C/C++", "Python", "FORTRAN", "Mathematica",],
+  programming: ["C/C++", "Python", "FORTRAN"],
   computational: [
     "PLUTO", "Athena++/AthenaK", "PyGRO", "Gammapy", "Brahma"
   ],
-  tools: ["LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "Microsoft"]
+  tools: ["Mathematica", "LaTeX", "Crixet", "ParaView", "VisIt", "Linux", "Mac", "MS-Office"]
 };
 
 const fullPublicationsList = [
