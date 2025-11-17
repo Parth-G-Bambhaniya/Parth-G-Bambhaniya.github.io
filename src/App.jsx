@@ -24,7 +24,7 @@ const personalInfo = {
   quote: "Every photon that escapes carries the truth of our Universe",
   email: "parth.bambhaniya@usp.br",
   location: "São Paulo, Brazil",
-  researchInterests: "Theoretical and Computational Astrophysics, Black Holes, Spacetime Singularities, General Relativity, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Gravitational Collapse, Transients and Multi-messengers (Member of ASTRI Mini-Array).",
+  researchInterests: "Theoretical and Computational Astrophysics, General Relativity, Black Holes, Spacetime Singularities, Shadows and Accretion Disks, Plasma Astrophysics, MHD and GRMHD, Horizonless Compact Objects, Relativistic Orbits of S-stars, Pulsar Timing, Tidal Forces, Stability and Quasinormal modes, Gravitational Collapse, Transients and Multi-messengers (Member of CTAO and ASTRI Mini-Array).",
   links: {
     googleScholar: "https://scholar.google.com/citations?user=bfBJi04AAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8424-3357",
